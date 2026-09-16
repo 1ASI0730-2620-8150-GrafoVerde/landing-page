@@ -139,6 +139,7 @@
 
   .benefits__media img {
     height: auto;
+    max-height: 280px;
     aspect-ratio: 770 / 425;
   }
 }

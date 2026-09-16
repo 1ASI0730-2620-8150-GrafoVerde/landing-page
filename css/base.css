@@ -55,11 +55,6 @@ a {
 
 .page {
   overflow-x: clip;
-  transition: opacity 140ms ease;
-}
-
-html.is-switching-lang .page {
-  opacity: 0;
 }
 
 .visually-hidden {

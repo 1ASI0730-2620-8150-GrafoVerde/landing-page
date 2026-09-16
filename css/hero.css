@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: min(100dvh, 820px);
+  min-height: 0;
   padding: 44px 24px 0;
   background-image: radial-gradient(
     circle farthest-corner at 50% 86%,
@@ -33,12 +33,12 @@
 
 .hero__title {
   margin: 0;
-  max-width: 16ch;
+  max-width: 18ch;
   color: var(--md-sys-color-on-surface);
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(32px, 7vw, 64px);
   font-weight: 600;
   letter-spacing: -0.055em;
-  line-height: 1.03;
+  line-height: 1.08;
 }
 
 .hero__lede {
@@ -93,16 +93,15 @@
 
 .hero__stage {
   width: min(1060px, 100%);
-  height: min(500px, 48vw);
   margin-top: 34px;
-  padding: 0 28px;
-  overflow: hidden;
+  padding: 0 16px 8px;
 }
 
 .hero__preview {
+  margin: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
+  aspect-ratio: 1060 / 500;
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: 18px;
   background: var(--md-sys-color-surface-container-low);
@@ -114,12 +113,18 @@
 .hero__preview img {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
 }
 
 @media (max-width: 767px) {
   .hero {
-    padding-top: 32px;
+    padding-top: 28px;
+    padding-inline: 16px;
+  }
+
+  .hero__title {
+    max-width: none;
   }
 
   .hero__lede {
@@ -128,7 +133,6 @@
   }
 
   .hero__stage {
-    height: 240px;
     margin-top: 24px;
     padding-inline: 0;
   }

@@ -3,13 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-      (function () {
-        var lang =
-          new URLSearchParams(location.search).get("lang") || localStorage.getItem("hostera-lang");
-        if (lang === "es") document.documentElement.classList.add("is-switching-lang");
-      })();
-    </script>
     <title>Hostera | Hotel operations, connected</title>
     <meta
       name="description"
@@ -53,20 +46,18 @@
           <a href="#product" data-i18n="nav.product">Product</a>
           <a href="#about" data-i18n="nav.about">About</a>
         </nav>
-        <div class="site-header__tools">
-          <p class="lang">
-            <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
-            <span aria-hidden="true">/</span>
-            <button type="button" data-lang="es" lang="es">ES</button>
-          </p>
-          <a class="site-header__cta" href="#free">
-            <span data-i18n="cta.free">Start for free</span>
-            <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
+        <p class="lang site-header__lang">
+          <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-lang="es" lang="es">ES</button>
+        </p>
+        <a class="site-header__cta" href="#free">
+          <span data-i18n="cta.free">Start for free</span>
+          <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
           <span class="visually-hidden" data-i18n="nav.menu">Open navigation menu</span>
           <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -407,9 +398,8 @@
                 clarity every day.
               </p>
             </div>
-            <div class="media-card media-card--tall" data-media-card>
-              <video src="public/discover-hostera.mp4" preload="none" playsinline></video>
-              <button class="media-card__play" type="button" data-media-play>
+            <div class="media-card media-card--tall">
+              <div class="media-card__play">
                 <span class="media-card__play-icon" aria-hidden="true">
                   <svg width="30" height="30" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" fill="currentColor" />
@@ -417,7 +407,7 @@
                 </span>
                 <span class="media-card__play-label" data-i18n="product.play">Discover Hostera</span>
                 <span class="media-card__play-hint" data-i18n="product.hint">See how it works in daily hotel operations</span>
-              </button>
+              </div>
             </div>
           </div>
         </section>
@@ -432,9 +422,8 @@
                   more connected and more human.
                 </p>
               </div>
-              <div class="media-card media-card--team" data-media-card>
-                <video src="public/meet-the-team.mp4" preload="none" playsinline></video>
-                <button class="media-card__play" type="button" data-media-play>
+              <div class="media-card media-card--team">
+                <div class="media-card__play">
                   <span class="media-card__play-icon" aria-hidden="true">
                     <svg width="28" height="28" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" fill="currentColor" />
@@ -442,13 +431,13 @@
                   </span>
                   <span class="media-card__play-label" data-i18n="team.play">Meet the team</span>
                   <span class="media-card__play-hint" data-i18n="team.hint">Discover who is building Hostera and why</span>
-                </button>
+                </div>
               </div>
             </div>
             <div class="team__grid">
               <article class="member">
                 <img src="public/team-mateo.jpg" width="232" height="260" alt="Mateo Condori" />
-                <div>
+                <div class="member__copy">
                   <h3 class="member__name">Mateo Condori</h3>
                   <p class="member__role" data-i18n="team.role">Software Engineer</p>
                   <p class="member__bio" data-i18n="team.mateo">Builds accessible interfaces and dependable component systems.</p>
@@ -456,7 +445,7 @@
               </article>
               <article class="member">
                 <img src="public/team-joaquin.jpg" width="232" height="260" alt="Joaquin Cuba" />
-                <div>
+                <div class="member__copy">
                   <h3 class="member__name">Joaquin Cuba</h3>
                   <p class="member__role" data-i18n="team.role">Software Engineer</p>
                   <p class="member__bio" data-i18n="team.joaquin">Designs robust APIs and reliable reservation services.</p>
@@ -464,7 +453,7 @@
               </article>
               <article class="member">
                 <img src="public/team-darnell.jpg" width="232" height="260" alt="Darnell Cuba" />
-                <div>
+                <div class="member__copy">
                   <h3 class="member__name">Darnell Cuba</h3>
                   <p class="member__role" data-i18n="team.role">Software Engineer</p>
                   <p class="member__bio" data-i18n="team.darnell">Turns operational needs into clear, scalable product features.</p>
@@ -472,7 +461,7 @@
               </article>
               <article class="member">
                 <img src="public/team-juan.jpg" width="232" height="260" alt="Juan Flores" />
-                <div>
+                <div class="member__copy">
                   <h3 class="member__name">Juan Flores</h3>
                   <p class="member__role" data-i18n="team.role">Software Engineer</p>
                   <p class="member__bio" data-i18n="team.juan">Connects data, integrations and team workflows across the platform.</p>
@@ -480,7 +469,7 @@
               </article>
               <article class="member">
                 <img src="public/team-jose.jpg" width="232" height="260" alt="José Santana" />
-                <div>
+                <div class="member__copy">
                   <h3 class="member__name">José Santana</h3>
                   <p class="member__role" data-i18n="team.role">Software Engineer</p>
                   <p class="member__bio" data-i18n="team.jose">Improves product quality through thoughtful implementation and testing.</p>
@@ -604,7 +593,6 @@
     </div>
     <script src="js/nav.js" defer></script>
     <script src="js/sales.js" defer></script>
-    <script src="js/media.js" defer></script>
     <script src="js/i18n.js" defer></script>
   </body>
 </html>

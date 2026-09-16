@@ -50,13 +50,15 @@
 }
 
 .pathway--independent {
-  width: min(520px, 100%);
+  flex: 1 1 280px;
+  max-width: 520px;
   background: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
 }
 
 .pathway--chain {
-  width: min(344px, 100%);
+  flex: 1 1 240px;
+  max-width: 344px;
   background: var(--md-sys-color-surface-container);
   border: 1px solid var(--md-sys-color-outline-variant);
   color: var(--md-sys-color-on-surface);
@@ -72,7 +74,8 @@
 }
 
 .pathway--group {
-  width: min(344px, 100%);
+  flex: 1 1 240px;
+  max-width: 344px;
   background: var(--md-sys-color-surface);
   border: 1px solid var(--md-sys-color-outline-variant);
   color: var(--md-sys-color-on-surface);
@@ -147,6 +150,7 @@
   .pathway--independent,
   .pathway--chain,
   .pathway--group {
-    width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
