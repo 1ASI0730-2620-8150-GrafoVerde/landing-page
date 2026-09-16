@@ -68,6 +68,11 @@
   line-height: 17px;
 }
 
+.site-footer__legal .lang button {
+  color: inherit;
+  font: inherit;
+}
+
 @media (max-width: 1023px) {
   .site-footer__inner {
     flex-direction: column;
