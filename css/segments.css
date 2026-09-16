@@ -71,6 +71,22 @@
   color: var(--md-sys-color-primary);
 }
 
+.pathway--group {
+  width: min(344px, 100%);
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+.pathway--group .pathway__scale,
+.pathway--group .pathway__body {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.pathway--group .pathway__cta {
+  color: var(--md-sys-color-primary);
+}
+
 .pathway__copy {
   display: flex;
   flex-direction: column;
@@ -129,7 +145,8 @@
   }
 
   .pathway--independent,
-  .pathway--chain {
+  .pathway--chain,
+  .pathway--group {
     width: 100%;
   }
 }
