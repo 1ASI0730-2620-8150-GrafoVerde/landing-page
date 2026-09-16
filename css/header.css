@@ -70,9 +70,15 @@
   text-decoration: none;
 }
 
-.lang a {
+.lang a,
+.lang button {
   color: inherit;
   text-decoration: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
 }
 
 .lang a[aria-current="page"] {

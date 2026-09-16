@@ -11,7 +11,7 @@ if (header && toggle) {
     setOpen(!header.classList.contains("is-open"));
   });
 
-  header.querySelectorAll("a").forEach((link) => {
+  header.querySelectorAll("a, [data-lang]").forEach((link) => {
     link.addEventListener("click", () => setOpen(false));
   });
 
