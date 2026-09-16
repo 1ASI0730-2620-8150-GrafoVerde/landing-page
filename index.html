@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        var lang =
+          new URLSearchParams(location.search).get("lang") || localStorage.getItem("hostera-lang");
+        if (lang === "es") document.documentElement.classList.add("is-switching-lang");
+      })();
+    </script>
     <title>Hostera | Hotel operations, connected</title>
     <meta
       name="description"
@@ -31,7 +38,7 @@
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
     <div class="page">
       <header class="site-header" data-site-header>
         <a class="brand" href="./">
@@ -39,21 +46,21 @@
           <span class="brand__word" aria-hidden="true">ostera</span>
           <span class="visually-hidden">Hostera</span>
         </a>
-        <nav class="site-header__nav" id="primary-nav" aria-label="Primary">
-          <a href="#solutions">Solutions</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#product">Product</a>
-          <a href="#about">About</a>
+        <nav class="site-header__nav" id="primary-nav" aria-label="Primary" data-i18n-aria="nav.primary">
+          <a href="#solutions" data-i18n="nav.solutions">Solutions</a>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+          <a href="#product" data-i18n="nav.product">Product</a>
+          <a href="#about" data-i18n="nav.about">About</a>
         </nav>
         <div class="site-header__tools">
           <p class="lang">
-            <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+            <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
             <span aria-hidden="true">/</span>
-            <a href="./es.html" lang="es" hreflang="es">ES</a>
+            <button type="button" data-lang="es" lang="es">ES</button>
           </p>
           <a class="site-header__cta" href="#free">
-            Start for free
+            <span data-i18n="cta.free">Start for free</span>
             <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -61,7 +68,7 @@
           </a>
         </div>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
-          <span class="visually-hidden">Open navigation menu</span>
+          <span class="visually-hidden" data-i18n="nav.menu">Open navigation menu</span>
           <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
@@ -71,15 +78,15 @@
       <main id="main">
         <section class="hero" aria-labelledby="hero-heading">
           <div class="hero__copy">
-            <p class="hero__eyebrow">HOTEL OPERATIONS, CONNECTED</p>
-            <h1 class="hero__title" id="hero-heading">Run your whole hotel operation from one place.</h1>
-            <p class="hero__lede">
+            <p class="hero__eyebrow" data-i18n="hero.eyebrow">HOTEL OPERATIONS, CONNECTED</p>
+            <h1 class="hero__title" id="hero-heading" data-i18n="hero.title">Run your whole hotel operation from one place.</h1>
+            <p class="hero__lede" data-i18n="hero.lede">
               Manage reservations, rooms, inventory and access across every property.
             </p>
           </div>
           <div class="hero__actions">
             <a class="hero__cta" href="#free">
-              Start for free
+              <span data-i18n="cta.free">Start for free</span>
               <svg class="hero__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M5 12h14"
@@ -106,7 +113,7 @@
                 src="public/hostera-dashboard.png"
                 width="1280"
                 height="720"
-                alt="Hostera overview showing reservations, room status, inventory and guest access for a property"
+                alt="Hostera overview showing reservations, room status, inventory and guest access for a property" data-i18n-alt="hero.alt"
               />
             </figure>
           </div>
@@ -115,22 +122,22 @@
         <section class="segments section-target" id="solutions" aria-labelledby="solutions-heading" tabindex="-1">
           <div class="segments__inner">
             <div class="segments__header">
-              <h2 class="segments__title" id="solutions-heading">Built for the way your hotel grows.</h2>
-              <p class="segments__lede">
+              <h2 class="segments__title" id="solutions-heading" data-i18n="segments.title">Built for the way your hotel grows.</h2>
+              <p class="segments__lede" data-i18n="segments.lede">
                 Choose a path based on operational scale. Each one leads to the right Hostera experience.
               </p>
             </div>
             <div class="segments__pathways">
               <article class="pathway pathway--independent">
                 <div class="pathway__copy">
-                  <p class="pathway__scale">1 PROPERTY · UP TO 10 ROOMS</p>
-                  <h3 class="pathway__title">Independent hotel</h3>
-                  <p class="pathway__body">
+                  <p class="pathway__scale" data-i18n="path.independent.scale">1 PROPERTY · UP TO 10 ROOMS</p>
+                  <h3 class="pathway__title" data-i18n="path.independent.title">Independent hotel</h3>
+                  <p class="pathway__body" data-i18n="path.independent.body">
                     Start with reservations, availability and room operations in one clear workspace.
                   </p>
                 </div>
                 <a class="pathway__cta" href="#free">
-                  Start for free
+                  <span data-i18n="cta.free">Start for free</span>
                   <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -139,14 +146,14 @@
               </article>
               <article class="pathway pathway--chain">
                 <div class="pathway__copy">
-                  <p class="pathway__scale">2-5 LOCATIONS</p>
-                  <h3 class="pathway__title">Small hotel chain</h3>
-                  <p class="pathway__body">
+                  <p class="pathway__scale" data-i18n="path.chain.scale">2-5 LOCATIONS</p>
+                  <h3 class="pathway__title" data-i18n="path.chain.title">Small hotel chain</h3>
+                  <p class="pathway__body" data-i18n="path.chain.body">
                     Coordinate rooms, stock and reports across every property.
                   </p>
                 </div>
                 <a class="pathway__cta" href="#professional">
-                  Explore Professional
+                  <span data-i18n="cta.professional">Explore Professional</span>
                   <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -155,14 +162,14 @@
               </article>
               <article class="pathway pathway--group">
                 <div class="pathway__copy">
-                  <p class="pathway__scale">MULTI-COUNTRY OPERATIONS</p>
-                  <h3 class="pathway__title">Hotel group</h3>
-                  <p class="pathway__body">
+                  <p class="pathway__scale" data-i18n="path.group.scale">MULTI-COUNTRY OPERATIONS</p>
+                  <h3 class="pathway__title" data-i18n="path.group.title">Hotel group</h3>
+                  <p class="pathway__body" data-i18n="path.group.body">
                     Connect unlimited locations, integrations and operational roles.
                   </p>
                 </div>
                 <a class="pathway__cta" href="#sales">
-                  Talk to sales
+                  <span data-i18n="cta.sales">Talk to sales</span>
                   <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -177,18 +184,18 @@
           <div class="problem__layout">
             <div class="problem__copy">
               <div class="problem__intro">
-                <h2 class="problem__title" id="problem-heading">
+                <h2 class="problem__title" id="problem-heading" data-i18n="problem.title">
                   Hotel operations break when information lives in different places.
                 </h2>
-                <p class="problem__body">
+                <p class="problem__body" data-i18n="problem.body">
                   Hostera connects reservations, rooms, inventory and guest access so every property
                   works from the same operational picture.
                 </p>
               </div>
               <ul class="problem__points">
-                <li>Fewer manual handoffs</li>
-                <li>Shared room status</li>
-                <li>Clear property context</li>
+                <li data-i18n="problem.p1">Fewer manual handoffs</li>
+                <li data-i18n="problem.p2">Shared room status</li>
+                <li data-i18n="problem.p3">Clear property context</li>
               </ul>
             </div>
             <figure class="problem__photo">
@@ -196,7 +203,7 @@
                 src="public/hotel-operations.png"
                 width="688"
                 height="532"
-                alt="Hotel staff reviewing operations together at the front desk"
+                alt="Hotel staff reviewing operations together at the front desk" data-i18n-alt="problem.alt"
               />
             </figure>
           </div>
@@ -206,19 +213,19 @@
           <div class="benefits__inner">
             <div id="benefits" class="section-target" tabindex="-1"></div>
             <div class="benefits__header">
-              <h2 class="benefits__title" id="features-heading">Daily operations, connected across every property.</h2>
-              <p class="benefits__lede">
+              <h2 class="benefits__title" id="features-heading" data-i18n="benefits.title">Daily operations, connected across every property.</h2>
+              <p class="benefits__lede" data-i18n="benefits.lede">
                 Coordinate occupancy, room readiness, inventory and guest access without switching between tools.
               </p>
             </div>
             <div class="benefits__composition">
               <figure class="benefits__media">
-                <figcaption class="benefits__media-title">RFID guest access, built for hospitality</figcaption>
+                <figcaption class="benefits__media-title" data-i18n="benefits.media">RFID guest access, built for hospitality</figcaption>
                 <img
                   src="public/rfid-guest-access.png"
                   width="770"
                   height="425"
-                  alt="Hostera guest access interface for hospitality RFID readers"
+                  alt="Hostera guest access interface for hospitality RFID readers" data-i18n-alt="benefits.mediaAlt"
                 />
               </figure>
               <div class="benefits__stack">
@@ -229,8 +236,8 @@
                     </svg>
                   </span>
                   <div>
-                    <h3 class="benefit-card__title">Centralized inventory</h3>
-                    <p class="benefit-card__body">
+                    <h3 class="benefit-card__title" data-i18n="benefits.inventory.title">Centralized inventory</h3>
+                    <p class="benefit-card__body" data-i18n="benefits.inventory.body">
                       Track stock by property and automatically flag critical shortages.
                     </p>
                   </div>
@@ -242,8 +249,8 @@
                     </svg>
                   </span>
                   <div>
-                    <h3 class="benefit-card__title">Access controls by property</h3>
-                    <p class="benefit-card__body">
+                    <h3 class="benefit-card__title" data-i18n="benefits.access.title">Access controls by property</h3>
+                    <p class="benefit-card__body" data-i18n="benefits.access.body">
                       Give staff access to the properties they need without exposing the rest.
                     </p>
                   </div>
@@ -256,8 +263,8 @@
         <section class="workflow section-target" id="how-hostera-works" aria-labelledby="workflow-heading" tabindex="-1">
           <div class="workflow__inner">
             <div class="workflow__header">
-              <h2 class="workflow__title" id="workflow-heading">Get every hotel ready to run in four steps.</h2>
-              <p class="workflow__lede">
+              <h2 class="workflow__title" id="workflow-heading" data-i18n="workflow.title">Get every hotel ready to run in four steps.</h2>
+              <p class="workflow__lede" data-i18n="workflow.lede">
                 Add your hotels, set up the team, connect access and inventory, then start operating.
               </p>
             </div>
@@ -269,8 +276,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h3 class="workflow__name">Add hotels</h3>
-                  <p class="workflow__body">Create each hotel and define its rooms.</p>
+                  <h3 class="workflow__name" data-i18n="workflow.s1.title">Add hotels</h3>
+                  <p class="workflow__body" data-i18n="workflow.s1.body">Create each hotel and define its rooms.</p>
                 </div>
               </li>
               <li class="workflow__step">
@@ -280,8 +287,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h3 class="workflow__name">Set up your team</h3>
-                  <p class="workflow__body">Invite staff and assign access by role.</p>
+                  <h3 class="workflow__name" data-i18n="workflow.s2.title">Set up your team</h3>
+                  <p class="workflow__body" data-i18n="workflow.s2.body">Invite staff and assign access by role.</p>
                 </div>
               </li>
               <li class="workflow__step">
@@ -291,8 +298,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h3 class="workflow__name">Connect systems</h3>
-                  <p class="workflow__body">Pair RFID readers and configure inventory workflows.</p>
+                  <h3 class="workflow__name" data-i18n="workflow.s3.title">Connect systems</h3>
+                  <p class="workflow__body" data-i18n="workflow.s3.body">Pair RFID readers and configure inventory workflows.</p>
                 </div>
               </li>
               <li class="workflow__step">
@@ -302,8 +309,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h3 class="workflow__name">Run operations</h3>
-                  <p class="workflow__body">
+                  <h3 class="workflow__name" data-i18n="workflow.s4.title">Run operations</h3>
+                  <p class="workflow__body" data-i18n="workflow.s4.body">
                     Manage reservations, room status, access and stock from the dashboard.
                   </p>
                 </div>
@@ -314,8 +321,8 @@
         <section class="plans section-target" id="pricing" aria-labelledby="pricing-heading" tabindex="-1">
           <div class="plans__wrap">
             <div class="plans__header">
-              <h2 class="plans__title" id="pricing-heading">A plan for each operating scale.</h2>
-              <p class="plans__lede">
+              <h2 class="plans__title" id="pricing-heading" data-i18n="plans.title">A plan for each operating scale.</h2>
+              <p class="plans__lede" data-i18n="plans.lede">
                 Start with one hotel or choose the plan built for your operating scale.
               </p>
             </div>
@@ -323,19 +330,19 @@
             <article class="plan" id="free">
               <div>
                 <div class="plan__intro">
-                  <h2 class="plan__name" id="free-heading">Free</h2>
-                  <p class="plan__scope">For one property with up to 10 rooms.</p>
+                  <h2 class="plan__name" id="free-heading" data-i18n="plan.free.name">Free</h2>
+                  <p class="plan__scope" data-i18n="plan.free.scope">For one property with up to 10 rooms.</p>
                 </div>
                 <ul class="plan__includes">
-                  <li>Basic reservations and availability</li>
-                  <li>Warehouse without automatic alerts</li>
-                  <li>One simulated RFID reader</li>
-                  <li>One administrator</li>
-                  <li>Community and documentation support</li>
+                  <li data-i18n="plan.free.i1">Basic reservations and availability</li>
+                  <li data-i18n="plan.free.i2">Warehouse without automatic alerts</li>
+                  <li data-i18n="plan.free.i3">One simulated RFID reader</li>
+                  <li data-i18n="plan.free.i4">One administrator</li>
+                  <li data-i18n="plan.free.i5">Community and documentation support</li>
                 </ul>
               </div>
               <a class="plan__cta" href="#free">
-                Start for free
+                <span data-i18n="cta.free">Start for free</span>
                 <svg class="plan__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -345,20 +352,20 @@
             <article class="plan plan--professional" id="professional">
               <div>
                 <div class="plan__intro">
-                  <h2 class="plan__name" id="professional-heading">Professional</h2>
-                  <p class="plan__scope">For hotel chains with 2 to 5 locations.</p>
+                  <h2 class="plan__name" id="professional-heading" data-i18n="plan.pro.name">Professional</h2>
+                  <p class="plan__scope" data-i18n="plan.pro.scope">For hotel chains with 2 to 5 locations.</p>
                 </div>
                 <ul class="plan__includes">
-                  <li>Unlimited rooms across locations</li>
-                  <li>Automatic critical-stock alerts</li>
-                  <li>Up to 25 RFID readers</li>
-                  <li>Reports by location</li>
-                  <li>Five administrators with roles</li>
-                  <li>Priority chat and email support</li>
+                  <li data-i18n="plan.pro.i1">Unlimited rooms across locations</li>
+                  <li data-i18n="plan.pro.i2">Automatic critical-stock alerts</li>
+                  <li data-i18n="plan.pro.i3">Up to 25 RFID readers</li>
+                  <li data-i18n="plan.pro.i4">Reports by location</li>
+                  <li data-i18n="plan.pro.i5">Five administrators with roles</li>
+                  <li data-i18n="plan.pro.i6">Priority chat and email support</li>
                 </ul>
               </div>
               <a class="plan__cta" href="#professional">
-                Explore Professional
+                <span data-i18n="cta.professional">Explore Professional</span>
                 <svg class="plan__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -368,20 +375,20 @@
             <article class="plan plan--enterprise" id="enterprise">
               <div>
                 <div class="plan__intro">
-                  <h2 class="plan__name" id="enterprise-heading">Enterprise</h2>
-                  <p class="plan__scope">For large or multinational hotel groups.</p>
+                  <h2 class="plan__name" id="enterprise-heading" data-i18n="plan.ent.name">Enterprise</h2>
+                  <p class="plan__scope" data-i18n="plan.ent.scope">For large or multinational hotel groups.</p>
                 </div>
                 <ul class="plan__includes">
-                  <li>Unlimited locations and RFID readers</li>
-                  <li>Open API for PMS integrations</li>
-                  <li>Dedicated onboarding</li>
-                  <li>Unlimited users and roles</li>
-                  <li>Guaranteed availability SLA</li>
-                  <li>Dedicated 24/7 support</li>
+                  <li data-i18n="plan.ent.i1">Unlimited locations and RFID readers</li>
+                  <li data-i18n="plan.ent.i2">Open API for PMS integrations</li>
+                  <li data-i18n="plan.ent.i3">Dedicated onboarding</li>
+                  <li data-i18n="plan.ent.i4">Unlimited users and roles</li>
+                  <li data-i18n="plan.ent.i5">Guaranteed availability SLA</li>
+                  <li data-i18n="plan.ent.i6">Dedicated 24/7 support</li>
                 </ul>
               </div>
               <a class="plan__cta" href="#sales">
-                Talk to sales
+                <span data-i18n="cta.sales">Talk to sales</span>
                 <svg class="plan__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -394,8 +401,8 @@
         <section class="discover section-target" id="product" aria-labelledby="product-heading" tabindex="-1">
           <div class="discover__inner">
             <div class="discover__copy">
-              <h2 class="discover__title" id="product-heading">Every part of your hotel, working together.</h2>
-              <p class="discover__lede">
+              <h2 class="discover__title" id="product-heading" data-i18n="product.title">Every part of your hotel, working together.</h2>
+              <p class="discover__lede" data-i18n="product.lede">
                 Reservations, rooms, inventory and access stay connected so your team can work with
                 clarity every day.
               </p>
@@ -408,8 +415,8 @@
                     <path d="M8 5v14l11-7z" fill="currentColor" />
                   </svg>
                 </span>
-                <span class="media-card__play-label">Discover Hostera</span>
-                <span class="media-card__play-hint">See how it works in daily hotel operations</span>
+                <span class="media-card__play-label" data-i18n="product.play">Discover Hostera</span>
+                <span class="media-card__play-hint" data-i18n="product.hint">See how it works in daily hotel operations</span>
               </button>
             </div>
           </div>
@@ -419,8 +426,8 @@
           <div class="team__inner">
             <div class="team__intro">
               <div class="team__copy">
-                <h2 class="team__title" id="about-heading">The team building Hostera.</h2>
-                <p class="team__lede">
+                <h2 class="team__title" id="about-heading" data-i18n="team.title">The team building Hostera.</h2>
+                <p class="team__lede" data-i18n="team.lede">
                   Five software engineers united by a simple idea: make hotel operations clearer,
                   more connected and more human.
                 </p>
@@ -433,8 +440,8 @@
                       <path d="M8 5v14l11-7z" fill="currentColor" />
                     </svg>
                   </span>
-                  <span class="media-card__play-label">Meet the team</span>
-                  <span class="media-card__play-hint">Discover who is building Hostera and why</span>
+                  <span class="media-card__play-label" data-i18n="team.play">Meet the team</span>
+                  <span class="media-card__play-hint" data-i18n="team.hint">Discover who is building Hostera and why</span>
                 </button>
               </div>
             </div>
@@ -443,40 +450,40 @@
                 <img src="public/team-mateo.jpg" width="232" height="260" alt="Mateo Condori" />
                 <div>
                   <h3 class="member__name">Mateo Condori</h3>
-                  <p class="member__role">Software Engineer</p>
-                  <p class="member__bio">Builds accessible interfaces and dependable component systems.</p>
+                  <p class="member__role" data-i18n="team.role">Software Engineer</p>
+                  <p class="member__bio" data-i18n="team.mateo">Builds accessible interfaces and dependable component systems.</p>
                 </div>
               </article>
               <article class="member">
                 <img src="public/team-joaquin.jpg" width="232" height="260" alt="Joaquin Cuba" />
                 <div>
                   <h3 class="member__name">Joaquin Cuba</h3>
-                  <p class="member__role">Software Engineer</p>
-                  <p class="member__bio">Designs robust APIs and reliable reservation services.</p>
+                  <p class="member__role" data-i18n="team.role">Software Engineer</p>
+                  <p class="member__bio" data-i18n="team.joaquin">Designs robust APIs and reliable reservation services.</p>
                 </div>
               </article>
               <article class="member">
                 <img src="public/team-darnell.jpg" width="232" height="260" alt="Darnell Cuba" />
                 <div>
                   <h3 class="member__name">Darnell Cuba</h3>
-                  <p class="member__role">Software Engineer</p>
-                  <p class="member__bio">Turns operational needs into clear, scalable product features.</p>
+                  <p class="member__role" data-i18n="team.role">Software Engineer</p>
+                  <p class="member__bio" data-i18n="team.darnell">Turns operational needs into clear, scalable product features.</p>
                 </div>
               </article>
               <article class="member">
                 <img src="public/team-juan.jpg" width="232" height="260" alt="Juan Flores" />
                 <div>
                   <h3 class="member__name">Juan Flores</h3>
-                  <p class="member__role">Software Engineer</p>
-                  <p class="member__bio">Connects data, integrations and team workflows across the platform.</p>
+                  <p class="member__role" data-i18n="team.role">Software Engineer</p>
+                  <p class="member__bio" data-i18n="team.juan">Connects data, integrations and team workflows across the platform.</p>
                 </div>
               </article>
               <article class="member">
                 <img src="public/team-jose.jpg" width="232" height="260" alt="José Santana" />
                 <div>
                   <h3 class="member__name">José Santana</h3>
-                  <p class="member__role">Software Engineer</p>
-                  <p class="member__bio">Improves product quality through thoughtful implementation and testing.</p>
+                  <p class="member__role" data-i18n="team.role">Software Engineer</p>
+                  <p class="member__bio" data-i18n="team.jose">Improves product quality through thoughtful implementation and testing.</p>
                 </div>
               </article>
             </div>
@@ -486,27 +493,27 @@
         <section class="support section-target" id="support" aria-labelledby="support-heading" tabindex="-1">
           <div class="support__inner">
             <div class="support__copy">
-              <h2 class="support__title" id="support-heading">Answers before you choose a plan.</h2>
-              <p class="support__lede">
+              <h2 class="support__title" id="support-heading" data-i18n="support.title">Answers before you choose a plan.</h2>
+              <p class="support__lede" data-i18n="support.lede">
                 Start with one hotel and change plans whenever your operation needs room to grow.
               </p>
-              <p class="support__note">AVAILABLE IN ENGLISH AND SPANISH</p>
+              <p class="support__note" data-i18n="support.note">AVAILABLE IN ENGLISH AND SPANISH</p>
             </div>
             <div class="faq">
               <details class="faq__item">
-                <summary>Can I start with one hotel?</summary>
-                <p>Yes. The Free plan supports one hotel with up to 10 rooms and one administrator.</p>
+                <summary data-i18n="faq.q1">Can I start with one hotel?</summary>
+                <p data-i18n="faq.a1">Yes. The Free plan supports one hotel with up to 10 rooms and one administrator.</p>
               </details>
               <details class="faq__item">
-                <summary>What changes with Professional?</summary>
-                <p>
+                <summary data-i18n="faq.q2">What changes with Professional?</summary>
+                <p data-i18n="faq.a2">
                   Professional adds multiple locations, unlimited rooms, stock alerts, reports and
                   role-based administration.
                 </p>
               </details>
               <details class="faq__item">
-                <summary>Is Hostera available in Spanish?</summary>
-                <p>Yes. Hostera is available in English and Latin American Spanish.</p>
+                <summary data-i18n="faq.q3">Is Hostera available in Spanish?</summary>
+                <p data-i18n="faq.a3">Yes. Hostera is available in English and Latin American Spanish.</p>
               </details>
             </div>
           </div>
@@ -515,21 +522,21 @@
         <section class="closing" aria-labelledby="closing-heading">
           <div class="closing__panel">
             <div class="closing__copy">
-              <h2 class="closing__title" id="closing-heading">Bring every property into one view.</h2>
-              <p class="closing__lede">
+              <h2 class="closing__title" id="closing-heading" data-i18n="closing.title">Bring every property into one view.</h2>
+              <p class="closing__lede" data-i18n="closing.lede">
                 Start with one hotel or choose the plan built for your operating scale.
               </p>
             </div>
             <div class="closing__actions">
               <a class="closing__cta closing__cta--primary" href="#free">
-                Start for free
+                <span data-i18n="cta.free">Start for free</span>
                 <svg class="closing__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
               <a class="closing__cta closing__cta--ghost" href="#sales">
-                Talk to sales
+                <span data-i18n="cta.sales">Talk to sales</span>
                 <svg class="closing__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -541,25 +548,25 @@
 
         <section class="sales section-target" id="sales" aria-labelledby="sales-heading" tabindex="-1">
           <div class="sales__panel">
-            <h2 class="sales__title" id="sales-heading">Talk to sales</h2>
-            <p class="sales__lede">
+            <h2 class="sales__title" id="sales-heading" data-i18n="sales.title">Talk to sales</h2>
+            <p class="sales__lede" data-i18n="sales.lede">
               Tell us about your hotel group and we will follow up about the Enterprise path.
             </p>
             <form class="sales__form" data-sales-form>
               <label>
-                Name
+                <span data-i18n="sales.name">Name</span>
                 <input type="text" name="name" autocomplete="name" required />
               </label>
               <label>
-                Hotel or group
+                <span data-i18n="sales.org">Hotel or group</span>
                 <input type="text" name="organization" autocomplete="organization" required />
               </label>
               <label>
-                Message
+                <span data-i18n="sales.message">Message</span>
                 <textarea name="message" rows="4" required></textarea>
               </label>
-              <button type="submit">Talk to sales</button>
-              <p class="sales__thanks" data-sales-thanks hidden>Thanks. A Hostera teammate will follow up.</p>
+              <button type="submit" data-i18n="cta.sales">Talk to sales</button>
+              <p class="sales__thanks" data-sales-thanks hidden data-i18n="sales.thanks">Thanks. A Hostera teammate will follow up.</p>
             </form>
           </div>
         </section>
@@ -573,24 +580,24 @@
               <span class="brand__word" aria-hidden="true">ostera</span>
               <span class="visually-hidden">Hostera</span>
             </a>
-            <p class="site-footer__tagline">Hotel operations, connected.</p>
+            <p class="site-footer__tagline" data-i18n="footer.tagline">Hotel operations, connected.</p>
           </div>
-          <nav class="site-footer__nav" aria-label="Footer">
-            <a href="#solutions">Solutions</a>
-            <a href="#benefits">Benefits</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#product">Product</a>
-            <a href="#about">About</a>
-            <a href="#support">Support</a>
+          <nav class="site-footer__nav" aria-label="Footer" data-i18n-aria="nav.footer">
+            <a href="#solutions" data-i18n="nav.solutions">Solutions</a>
+            <a href="#benefits" data-i18n="nav.benefits">Benefits</a>
+            <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+            <a href="#product" data-i18n="nav.product">Product</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#support" data-i18n="nav.support">Support</a>
           </nav>
           <div class="site-footer__legal">
-            <a href="terms.html">Terms and Conditions</a>
+            <a href="terms.html" data-i18n="footer.terms">Terms and Conditions</a>
             <p class="lang">
-              <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+              <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
               <span aria-hidden="true">/</span>
-              <a href="./es.html" lang="es" hreflang="es">ES</a>
+              <button type="button" data-lang="es" lang="es">ES</button>
             </p>
-            <p class="site-footer__copy">© 2026 Grafo Verde. All rights reserved.</p>
+            <p class="site-footer__copy" data-i18n="footer.copy">© 2026 Grafo Verde. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -598,5 +605,6 @@
     <script src="js/nav.js" defer></script>
     <script src="js/sales.js" defer></script>
     <script src="js/media.js" defer></script>
+    <script src="js/i18n.js" defer></script>
   </body>
 </html>
