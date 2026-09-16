@@ -5,11 +5,37 @@
   background: var(--md-sys-color-surface);
 }
 
+.plans__wrap {
+  width: min(var(--container-page), 100%);
+}
+
+.plans__header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.plans__title {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.plans__lede {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 16px;
+  line-height: 25px;
+}
+
 .plans__inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  width: min(var(--container-page), 100%);
+  gap: 20px;
 }
 
 .plan {

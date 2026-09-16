@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/workflow.css" />
     <link rel="stylesheet" href="css/plan-free.css" />
     <link rel="stylesheet" href="css/plan-professional.css" />
+    <link rel="stylesheet" href="css/plan-enterprise.css" />
+    <link rel="stylesheet" href="css/closing.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
@@ -142,6 +144,22 @@
                 </div>
                 <a class="pathway__cta" href="#professional">
                   Explore Professional
+                  <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </article>
+              <article class="pathway pathway--group">
+                <div class="pathway__copy">
+                  <p class="pathway__scale">MULTI-COUNTRY OPERATIONS</p>
+                  <h3 class="pathway__title">Hotel group</h3>
+                  <p class="pathway__body">
+                    Connect unlimited locations, integrations and operational roles.
+                  </p>
+                </div>
+                <a class="pathway__cta" href="#sales">
+                  Talk to sales
                   <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                     <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -290,7 +308,14 @@
             </ol>
           </div>
         </section>
-        <section class="plans section-target" id="pricing" aria-labelledby="free-heading professional-heading" tabindex="-1">
+        <section class="plans section-target" id="pricing" aria-labelledby="pricing-heading" tabindex="-1">
+          <div class="plans__wrap">
+            <div class="plans__header">
+              <h2 class="plans__title" id="pricing-heading">A plan for each operating scale.</h2>
+              <p class="plans__lede">
+                Start with one hotel or choose the plan built for your operating scale.
+              </p>
+            </div>
           <div class="plans__inner">
             <article class="plan" id="free">
               <div>
@@ -337,6 +362,30 @@
                 </svg>
               </a>
             </article>
+            <article class="plan plan--enterprise" id="enterprise">
+              <div>
+                <div class="plan__intro">
+                  <h2 class="plan__name" id="enterprise-heading">Enterprise</h2>
+                  <p class="plan__scope">For large or multinational hotel groups.</p>
+                </div>
+                <ul class="plan__includes">
+                  <li>Unlimited locations and RFID readers</li>
+                  <li>Open API for PMS integrations</li>
+                  <li>Dedicated onboarding</li>
+                  <li>Unlimited users and roles</li>
+                  <li>Guaranteed availability SLA</li>
+                  <li>Dedicated 24/7 support</li>
+                </ul>
+              </div>
+              <a class="plan__cta" href="#sales">
+                Talk to sales
+                <svg class="plan__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </article>
+          </div>
           </div>
         </section>
         <section id="product" class="section-target" tabindex="-1">
@@ -347,6 +396,58 @@
         </section>
         <section id="support" class="section-target" tabindex="-1">
           <h2 class="visually-hidden">Support</h2>
+        </section>
+
+        <section class="closing" aria-labelledby="closing-heading">
+          <div class="closing__panel">
+            <div class="closing__copy">
+              <h2 class="closing__title" id="closing-heading">Bring every property into one view.</h2>
+              <p class="closing__lede">
+                Start with one hotel or choose the plan built for your operating scale.
+              </p>
+            </div>
+            <div class="closing__actions">
+              <a class="closing__cta closing__cta--primary" href="#free">
+                Start for free
+                <svg class="closing__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="closing__cta closing__cta--ghost" href="#sales">
+                Talk to sales
+                <svg class="closing__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="sales section-target" id="sales" aria-labelledby="sales-heading" tabindex="-1">
+          <div class="sales__panel">
+            <h2 class="sales__title" id="sales-heading">Talk to sales</h2>
+            <p class="sales__lede">
+              Tell us about your hotel group and we will follow up about the Enterprise path.
+            </p>
+            <form class="sales__form" data-sales-form>
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Hotel or group
+                <input type="text" name="organization" autocomplete="organization" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button type="submit">Talk to sales</button>
+              <p class="sales__thanks" data-sales-thanks hidden>Thanks. A Hostera teammate will follow up.</p>
+            </form>
+          </div>
         </section>
       </main>
 
@@ -381,5 +482,6 @@
       </footer>
     </div>
     <script src="js/nav.js" defer></script>
+    <script src="js/sales.js" defer></script>
   </body>
 </html>
