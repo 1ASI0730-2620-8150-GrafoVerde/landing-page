@@ -1,0 +1,125 @@
+.discover {
+  display: flex;
+  justify-content: center;
+  padding: 64px clamp(16px, 6vw, 100px);
+  background: var(--md-sys-color-surface);
+}
+
+.discover__inner {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: min(var(--container-page), 100%);
+}
+
+.discover__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(420px, 100%);
+}
+
+.discover__title {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.14;
+}
+
+.discover__lede {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.media-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 330px;
+  overflow: hidden;
+  border: 1px dashed var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-corner-large);
+  background: var(--md-sys-color-surface-container);
+}
+
+.media-card--tall {
+  min-height: 425px;
+}
+
+.media-card video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--md-sys-color-surface-container);
+}
+
+.media-card.is-playing video {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.media-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: 0;
+  background: var(--md-sys-color-surface-container);
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface);
+}
+
+.media-card.is-playing .media-card__play {
+  display: none;
+}
+
+.media-card__play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.media-card--team .media-card__play-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.media-card__play-label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.media-card__play-hint {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media (max-width: 1023px) {
+  .discover__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .discover__copy {
+    width: 100%;
+  }
+}
