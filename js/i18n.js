@@ -296,16 +296,11 @@ const applyLanguage = (lang) => {
 
 const setLanguage = (lang) => {
   const next = translations[lang] ? lang : "en";
-  const html = document.documentElement;
-  html.classList.add("is-switching-lang");
-  window.setTimeout(() => {
-    applyLanguage(next);
-    localStorage.setItem(STORAGE_KEY, next);
-    const url = new URL(window.location.href);
-    url.searchParams.set("lang", next);
-    window.history.replaceState({}, "", url);
-    html.classList.remove("is-switching-lang");
-  }, 140);
+  applyLanguage(next);
+  localStorage.setItem(STORAGE_KEY, next);
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", next);
+  window.history.replaceState({}, "", url);
 };
 
 const initial =
