@@ -128,3 +128,10 @@
     min-height: 240px;
   }
 }
+
+@media (max-width: 767px) {
+  .media-card,
+  .media-card--team {
+    min-height: 220px;
+  }
+}
