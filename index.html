@@ -15,12 +15,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.2.5/600.css" />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/problem.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="page">
+      <header class="site-header" data-site-header>
+        <a class="brand" href="./">
+          <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
+          <span class="brand__word" aria-hidden="true">ostera</span>
+          <span class="visually-hidden">Hostera</span>
+        </a>
+        <nav class="site-header__nav" id="primary-nav" aria-label="Primary">
+          <a href="#solutions">Solutions</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#product">Product</a>
+          <a href="#about">About</a>
+        </nav>
+        <div class="site-header__tools">
+          <p class="lang">
+            <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+            <span aria-hidden="true">/</span>
+            <a href="./es.html" lang="es" hreflang="es">ES</a>
+          </p>
+          <a class="site-header__cta" href="#free">
+            Start for free
+            <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          <span class="visually-hidden">Open navigation menu</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </header>
+
       <main id="main">
         <section class="hero" aria-labelledby="hero-heading">
           <div class="hero__copy">
@@ -93,7 +130,63 @@
             </figure>
           </div>
         </section>
+
+        <section id="solutions" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Solutions</h2>
+        </section>
+        <section id="features" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Features</h2>
+        </section>
+        <section id="benefits" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Benefits</h2>
+        </section>
+        <section id="pricing" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Pricing</h2>
+        </section>
+        <section id="free" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Start for free</h2>
+        </section>
+        <section id="product" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Product</h2>
+        </section>
+        <section id="about" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">About</h2>
+        </section>
+        <section id="support" class="section-target" tabindex="-1">
+          <h2 class="visually-hidden">Support</h2>
+        </section>
       </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <a class="brand" href="./">
+              <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
+              <span class="brand__word" aria-hidden="true">ostera</span>
+              <span class="visually-hidden">Hostera</span>
+            </a>
+            <p class="site-footer__tagline">Hotel operations, connected.</p>
+          </div>
+          <nav class="site-footer__nav" aria-label="Footer">
+            <a href="#solutions">Solutions</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#product">Product</a>
+            <a href="#about">About</a>
+            <a href="#support">Support</a>
+          </nav>
+          <div class="site-footer__legal">
+            <a href="terms.html">Terms and Conditions</a>
+            <p class="lang">
+              <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+              <span aria-hidden="true">/</span>
+              <a href="./es.html" lang="es" hreflang="es">ES</a>
+            </p>
+            <p class="site-footer__copy">© 2026 Grafo Verde. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
+    <script src="js/nav.js" defer></script>
   </body>
 </html>
