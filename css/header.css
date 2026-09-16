@@ -81,7 +81,8 @@
   cursor: pointer;
 }
 
-.lang a[aria-current="page"] {
+.lang a[aria-current="page"],
+.lang button[aria-current="page"] {
   color: var(--md-sys-color-on-surface);
   font-weight: 600;
 }
@@ -142,9 +143,13 @@
   }
 
   .site-header__nav,
-  .site-header__tools .lang,
   .site-header__cta {
     display: none;
+  }
+
+  .site-header__tools {
+    margin-left: auto;
+    margin-right: 8px;
   }
 
   .site-header.is-open .site-header__nav,
@@ -175,7 +180,6 @@
     padding-top: 12px;
   }
 
-  .site-header.is-open .site-header__tools .lang,
   .site-header.is-open .site-header__cta {
     display: inline-flex;
   }

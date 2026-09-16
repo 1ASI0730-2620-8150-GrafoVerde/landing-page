@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: min(100dvh, 820px);
+  min-height: 0;
   padding: 44px 24px 0;
   background-image: radial-gradient(
     circle farthest-corner at 50% 86%,
@@ -33,12 +33,12 @@
 
 .hero__title {
   margin: 0;
-  max-width: 16ch;
+  max-width: 18ch;
   color: var(--md-sys-color-on-surface);
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(32px, 7vw, 64px);
   font-weight: 600;
   letter-spacing: -0.055em;
-  line-height: 1.03;
+  line-height: 1.08;
 }
 
 .hero__lede {
@@ -119,7 +119,12 @@
 
 @media (max-width: 767px) {
   .hero {
-    padding-top: 32px;
+    padding-top: 28px;
+    padding-inline: 16px;
+  }
+
+  .hero__title {
+    max-width: none;
   }
 
   .hero__lede {
@@ -128,7 +133,7 @@
   }
 
   .hero__stage {
-    height: 240px;
+    height: min(220px, 58vw);
     margin-top: 24px;
     padding-inline: 0;
   }

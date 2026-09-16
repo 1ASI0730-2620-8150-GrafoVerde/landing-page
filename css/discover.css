@@ -122,4 +122,9 @@
   .discover__copy {
     width: 100%;
   }
+
+  .media-card,
+  .media-card--tall {
+    min-height: 240px;
+  }
 }
