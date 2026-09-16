@@ -83,6 +83,9 @@ a {
   border: 0;
 }
 
-.section-target {
+.section-target,
+#free,
+#professional,
+#enterprise {
   scroll-margin-top: 96px;
 }
