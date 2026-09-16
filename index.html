@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="css/plan-free.css" />
     <link rel="stylesheet" href="css/plan-professional.css" />
     <link rel="stylesheet" href="css/plan-enterprise.css" />
+    <link rel="stylesheet" href="css/discover.css" />
+    <link rel="stylesheet" href="css/team.css" />
+    <link rel="stylesheet" href="css/support.css" />
     <link rel="stylesheet" href="css/closing.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -388,14 +391,125 @@
           </div>
           </div>
         </section>
-        <section id="product" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">Product</h2>
+        <section class="discover section-target" id="product" aria-labelledby="product-heading" tabindex="-1">
+          <div class="discover__inner">
+            <div class="discover__copy">
+              <h2 class="discover__title" id="product-heading">Every part of your hotel, working together.</h2>
+              <p class="discover__lede">
+                Reservations, rooms, inventory and access stay connected so your team can work with
+                clarity every day.
+              </p>
+            </div>
+            <div class="media-card media-card--tall" data-media-card>
+              <video src="public/discover-hostera.mp4" preload="none" playsinline></video>
+              <button class="media-card__play" type="button" data-media-play>
+                <span class="media-card__play-icon" aria-hidden="true">
+                  <svg width="30" height="30" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" fill="currentColor" />
+                  </svg>
+                </span>
+                <span class="media-card__play-label">Discover Hostera</span>
+                <span class="media-card__play-hint">See how it works in daily hotel operations</span>
+              </button>
+            </div>
+          </div>
         </section>
-        <section id="about" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">About</h2>
+
+        <section class="team section-target" id="about" aria-labelledby="about-heading" tabindex="-1">
+          <div class="team__inner">
+            <div class="team__intro">
+              <div class="team__copy">
+                <h2 class="team__title" id="about-heading">The team building Hostera.</h2>
+                <p class="team__lede">
+                  Five software engineers united by a simple idea: make hotel operations clearer,
+                  more connected and more human.
+                </p>
+              </div>
+              <div class="media-card media-card--team" data-media-card>
+                <video src="public/meet-the-team.mp4" preload="none" playsinline></video>
+                <button class="media-card__play" type="button" data-media-play>
+                  <span class="media-card__play-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <span class="media-card__play-label">Meet the team</span>
+                  <span class="media-card__play-hint">Discover who is building Hostera and why</span>
+                </button>
+              </div>
+            </div>
+            <div class="team__grid">
+              <article class="member">
+                <img src="public/team-mateo.jpg" width="232" height="260" alt="Mateo Condori" />
+                <div>
+                  <h3 class="member__name">Mateo Condori</h3>
+                  <p class="member__role">Software Engineer</p>
+                  <p class="member__bio">Builds accessible interfaces and dependable component systems.</p>
+                </div>
+              </article>
+              <article class="member">
+                <img src="public/team-joaquin.jpg" width="232" height="260" alt="Joaquin Cuba" />
+                <div>
+                  <h3 class="member__name">Joaquin Cuba</h3>
+                  <p class="member__role">Software Engineer</p>
+                  <p class="member__bio">Designs robust APIs and reliable reservation services.</p>
+                </div>
+              </article>
+              <article class="member">
+                <img src="public/team-darnell.jpg" width="232" height="260" alt="Darnell Cuba" />
+                <div>
+                  <h3 class="member__name">Darnell Cuba</h3>
+                  <p class="member__role">Software Engineer</p>
+                  <p class="member__bio">Turns operational needs into clear, scalable product features.</p>
+                </div>
+              </article>
+              <article class="member">
+                <img src="public/team-juan.jpg" width="232" height="260" alt="Juan Flores" />
+                <div>
+                  <h3 class="member__name">Juan Flores</h3>
+                  <p class="member__role">Software Engineer</p>
+                  <p class="member__bio">Connects data, integrations and team workflows across the platform.</p>
+                </div>
+              </article>
+              <article class="member">
+                <img src="public/team-jose.jpg" width="232" height="260" alt="José Santana" />
+                <div>
+                  <h3 class="member__name">José Santana</h3>
+                  <p class="member__role">Software Engineer</p>
+                  <p class="member__bio">Improves product quality through thoughtful implementation and testing.</p>
+                </div>
+              </article>
+            </div>
+          </div>
         </section>
-        <section id="support" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">Support</h2>
+
+        <section class="support section-target" id="support" aria-labelledby="support-heading" tabindex="-1">
+          <div class="support__inner">
+            <div class="support__copy">
+              <h2 class="support__title" id="support-heading">Answers before you choose a plan.</h2>
+              <p class="support__lede">
+                Start with one hotel and change plans whenever your operation needs room to grow.
+              </p>
+              <p class="support__note">AVAILABLE IN ENGLISH AND SPANISH</p>
+            </div>
+            <div class="faq">
+              <details class="faq__item">
+                <summary>Can I start with one hotel?</summary>
+                <p>Yes. The Free plan supports one hotel with up to 10 rooms and one administrator.</p>
+              </details>
+              <details class="faq__item">
+                <summary>What changes with Professional?</summary>
+                <p>
+                  Professional adds multiple locations, unlimited rooms, stock alerts, reports and
+                  role-based administration.
+                </p>
+              </details>
+              <details class="faq__item">
+                <summary>Is Hostera available in Spanish?</summary>
+                <p>Yes. Hostera is available in English and Latin American Spanish.</p>
+              </details>
+            </div>
+          </div>
         </section>
 
         <section class="closing" aria-labelledby="closing-heading">
@@ -483,5 +597,6 @@
     </div>
     <script src="js/nav.js" defer></script>
     <script src="js/sales.js" defer></script>
+    <script src="js/media.js" defer></script>
   </body>
 </html>
