@@ -1,30 +1,48 @@
-# README.md
+# Hostera
 
-Nuestro proyecto nace de un problema que vemos en las cadenas hoteleras: la gestión de reservas, disponibilidad de habitaciones y almacén se suele llevar de forma manual o con sistemas separados por sede, lo que genera errores de sobreventa, falta de visibilidad del stock y poco control sobre el acceso físico a las habitaciones. Por eso, buscamos desarrollar un panel administrativo web centralizado que permita monitorear en tiempo real las reservas, la disponibilidad y el almacén, y que pueda ser replicado en varias cadenas de hoteles.
+**Hotel operations, connected.**
 
-**Free** — para empezar
+Hostera is a hotel-operations product from **Grafo Verde**. It brings reservations, rooms, inventory, and guest access into one place so independent hotels, small chains, and hotel groups can work from the same operational picture.
 
-- 1 hotel, hasta 10 habitaciones
-- Panel de reservas y disponibilidad básico
-- Módulo de almacén (sin alertas automáticas)
-- 1 lector RFID incluido (modo simulación/demo)
-- 1 usuario administrador
-- Soporte por comunidad/documentación
+This repository is the **public landing page** for that product: a static site in HTML, CSS, and JavaScript. It is not the Hostera admin application. The page is English by default and can switch to Spanish in place.
 
-**Professional** — para cadenas pequeñas (2-5 sedes)
+## What the page covers
 
-- Todo lo de Free, sin límite de habitaciones, multi-sede
-- Alertas automáticas de stock crítico
-- Hasta 25 lectores RFID
-- Reportes de ocupación y consumo por sede
-- Soporte prioritario (chat + correo)
-- Hasta 5 usuarios administradores con roles
+- Product proposition and a dashboard preview of daily operations
+- Paths by scale: independent hotel (Free), small chain (Professional), hotel group (Enterprise)
+- Why operations break when information lives in different places
+- Benefits (inventory, access) and a four-step setup flow
+- Plan comparison, sales contact, team, FAQ, and terms
 
-**Enterprise** — para cadenas grandes / multi-país
+Live section links, language (EN/ES), and the terms page all stay on this static site.
 
-- Todo lo de Professional, sedes ilimitadas
-- Lectores RFID ilimitados
-- API abierta para integraciones propias (PMS, channel managers)
-- Soporte dedicado 24/7 + onboarding personalizado
-- Usuarios y roles ilimitados
-- SLA de disponibilidad garantizado
+## Plans (as presented on the page)
+
+| Plan             | For                           | Next step            |
+| ---------------- | ----------------------------- | -------------------- |
+| **Free**         | One property, up to 10 rooms  | Start for free       |
+| **Professional** | Chains with 2–5 locations     | Explore Professional |
+| **Enterprise**   | Large or multinational groups | Talk to sales        |
+
+## Run locally
+
+Serve the project root (so `index.html`, `css/`, `js/`, and `public/` resolve together):
+
+```bash
+python3 -m http.server 8765
+```
+
+Then open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
+
+## Stack
+
+- HTML, CSS, and JavaScript (no framework)
+- In-page English/Spanish copy in `js/i18n.js`
+- GSAP (CDN) for hero and scroll motion
+- Git Flow (`main` / `develop`, releases tagged `v0.2.0` and later)
+
+User stories for the landing page live in [`docs/user-stories.md`](docs/user-stories.md).
+
+## License
+
+MIT. See [LICENSE.md](LICENSE.md). Published by Grafo Verde.
