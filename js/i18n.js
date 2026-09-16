@@ -128,6 +128,37 @@ const translations = {
     "footer.tagline": "Hotel operations, connected.",
     "footer.terms": "Terms and Conditions",
     "footer.copy": "© 2026 Grafo Verde. All rights reserved.",
+    "terms.meta.title": "Terms and Conditions | Hostera",
+    "terms.meta.description":
+      "Terms that govern use of the Hostera landing page and Hostera services published by Grafo Verde.",
+    "terms.title": "Terms and Conditions",
+    "terms.updated": "Last updated: 16 September 2026",
+    "terms.intro":
+      "These terms govern access to the Hostera website and the Hostera hotel-operations product published by Grafo Verde. By using this site you agree to them. If you do not agree, do not use the site or the product.",
+    "terms.h.who": "1. Publisher",
+    "terms.p.who":
+      "Hostera is published by Grafo Verde. References to “we”, “us”, or “our” mean Grafo Verde. Hostera is a hotel-operations product for reservations, rooms, inventory, and guest access across one or more properties.",
+    "terms.h.site": "2. This website",
+    "terms.p.site":
+      "The landing page describes Hostera and lets visitors compare plans, learn about the team, and contact sales. Information on the site is for general presentation. It is not a binding offer, a service-level commitment, or legal, tax, or operational advice.",
+    "terms.h.plans": "3. Plans and commercial offers",
+    "terms.p.plans":
+      "Free, Professional, and Enterprise are commercial offers described on the site. Features, limits, and availability may change. Starting a Free path, exploring Professional, or talking to sales does not by itself create a paid contract. Enterprise and custom work may require a separate agreement.",
+    "terms.h.use": "4. Acceptable use",
+    "terms.p.use":
+      "You may browse the site for lawful purposes. You must not misuse the site, attempt unauthorized access, disrupt its operation, scrape it in an abusive way, or copy product materials, marks, or media without permission.",
+    "terms.h.ip": "5. Intellectual property",
+    "terms.p.ip":
+      "The Hostera name, the Hostera mark, copy, layout, and media on this site are owned by Grafo Verde or used with permission. You do not receive a license to reuse them except as needed to view the site in a browser.",
+    "terms.h.data": "6. Information you send us",
+    "terms.p.data":
+      "If you submit the sales form, we use the name, organization, and message you provide to follow up about Hostera. Do not send sensitive personal data through that form. We keep that information only as long as needed to respond.",
+    "terms.h.changes": "7. Changes",
+    "terms.p.changes":
+      "We may update these terms as Hostera grows. The date at the top of this page shows the current version. Continued use of the site after a change means you accept the updated terms.",
+    "terms.h.contact": "8. Contact",
+    "terms.p.contact":
+      "Questions about these terms or Hostera can be sent through the Talk to sales form on the landing page.",
   },
   es: {
     "meta.title": "Hostera | Operación hotelera, conectada",
@@ -260,6 +291,37 @@ const translations = {
     "footer.tagline": "Operación hotelera, conectada.",
     "footer.terms": "Términos y condiciones",
     "footer.copy": "© 2026 Grafo Verde. Todos los derechos reservados.",
+    "terms.meta.title": "Términos y condiciones | Hostera",
+    "terms.meta.description":
+      "Términos que rigen el uso de la página de Hostera y de los servicios Hostera publicados por Grafo Verde.",
+    "terms.title": "Términos y condiciones",
+    "terms.updated": "Última actualización: 16 de septiembre de 2026",
+    "terms.intro":
+      "Estos términos rigen el acceso al sitio de Hostera y al producto de operación hotelera Hostera publicado por Grafo Verde. Al usar este sitio aceptas estos términos. Si no estás de acuerdo, no uses el sitio ni el producto.",
+    "terms.h.who": "1. Editor",
+    "terms.p.who":
+      "Hostera es publicado por Grafo Verde. Las referencias a “nosotros” significan Grafo Verde. Hostera es un producto de operación hotelera para reservas, habitaciones, inventario y acceso de huéspedes en una o varias propiedades.",
+    "terms.h.site": "2. Este sitio",
+    "terms.p.site":
+      "La página de inicio presenta Hostera y permite comparar planes, conocer al equipo y contactar a ventas. La información del sitio es de carácter general. No constituye una oferta vinculante, un compromiso de nivel de servicio ni asesoramiento legal, fiscal u operativo.",
+    "terms.h.plans": "3. Planes y ofertas comerciales",
+    "terms.p.plans":
+      "Gratis, Profesional y Empresarial son ofertas comerciales descritas en el sitio. Las funciones, los límites y la disponibilidad pueden cambiar. Iniciar el camino Gratis, explorar Profesional o hablar con ventas no crea por sí solo un contrato de pago. El plan Empresarial y el trabajo a medida pueden requerir un acuerdo aparte.",
+    "terms.h.use": "4. Uso aceptable",
+    "terms.p.use":
+      "Puedes navegar el sitio con fines lícitos. No debes hacer un uso indebido del sitio, intentar un acceso no autorizado, interrumpir su funcionamiento, extraer datos de forma abusiva ni copiar materiales, marcas o medios del producto sin permiso.",
+    "terms.h.ip": "5. Propiedad intelectual",
+    "terms.p.ip":
+      "El nombre Hostera, la marca Hostera, los textos, el diseño y los medios de este sitio son de Grafo Verde o se usan con permiso. No recibes una licencia para reutilizarlos, salvo la necesaria para ver el sitio en un navegador.",
+    "terms.h.data": "6. Información que nos envías",
+    "terms.p.data":
+      "Si envías el formulario de ventas, usamos el nombre, la organización y el mensaje para dar seguimiento sobre Hostera. No envíes datos personales sensibles por ese formulario. Conservamos esa información solo el tiempo necesario para responder.",
+    "terms.h.changes": "7. Cambios",
+    "terms.p.changes":
+      "Podemos actualizar estos términos a medida que Hostera crece. La fecha al inicio de esta página indica la versión vigente. Seguir usando el sitio después de un cambio significa que aceptas los términos actualizados.",
+    "terms.h.contact": "8. Contacto",
+    "terms.p.contact":
+      "Las preguntas sobre estos términos o sobre Hostera se pueden enviar con el formulario Hablar con ventas de la página de inicio.",
   },
 };
 
@@ -268,9 +330,13 @@ const STORAGE_KEY = "hostera-lang";
 const applyLanguage = (lang) => {
   const pack = translations[lang] || translations.en;
   document.documentElement.lang = lang;
-  document.title = pack["meta.title"];
+  const titleKey = document.documentElement.dataset.i18nTitle || "meta.title";
+  const descKey = document.documentElement.dataset.i18nDescription || "meta.description";
+  document.title = pack[titleKey] || pack["meta.title"];
   const description = document.querySelector('meta[name="description"]');
-  if (description) description.setAttribute("content", pack["meta.description"]);
+  if (description) {
+    description.setAttribute("content", pack[descKey] || pack["meta.description"]);
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = pack[node.dataset.i18n];

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  data-i18n-title="terms.meta.title"
+  data-i18n-description="terms.meta.description"
+>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Terms and Conditions | Hostera</title>
-    <meta name="description" content="Service terms for Hostera, published by Grafo Verde." />
+    <meta
+      name="description"
+      content="Terms that govern use of the Hostera landing page and Hostera services published by Grafo Verde."
+    />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/400.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/500.css" />
@@ -14,95 +21,134 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <style>
-      .terms {
-        width: min(720px, calc(100% - 48px));
-        margin: 48px auto 72px;
-      }
-      .terms h1 {
-        margin: 0 0 16px;
-        font-size: 36px;
-        letter-spacing: -0.035em;
-      }
-      .terms p,
-      .terms li {
-        color: var(--md-sys-color-on-surface-variant);
-        font-size: 16px;
-        line-height: 26px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/terms.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-site-header>
-      <a class="brand" href="./">
-        <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
-        <span class="brand__word" aria-hidden="true">ostera</span>
-        <span class="visually-hidden">Hostera</span>
-      </a>
-      <nav class="site-header__nav" aria-label="Primary">
-        <a href="./#solutions">Solutions</a>
-        <a href="./#features">Features</a>
-        <a href="./#pricing">Pricing</a>
-        <a href="./#product">Product</a>
-        <a href="./#about">About</a>
-      </nav>
-      <div class="site-header__tools">
-        <p class="lang">
-          <a href="./?lang=en" lang="en" hreflang="en" aria-current="page">EN</a>
-          <span aria-hidden="true">/</span>
-          <a href="./?lang=es" lang="es" hreflang="es">ES</a>
-        </p>
-        <a class="site-header__cta" href="./#free">Start for free</a>
-      </div>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false">
-        <span class="visually-hidden">Open navigation menu</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </button>
-    </header>
-    <main id="main" class="terms">
-      <h1>Terms and Conditions</h1>
-      <p>These terms govern use of the Hostera landing page and related Hostera services published by Grafo Verde.</p>
-      <ul>
-        <li>Hostera is provided as a hotel-operations product for reservations, rooms, inventory, and access.</li>
-        <li>The Free, Professional, and Enterprise plans described on the landing page are commercial offers, not a guarantee of availability.</li>
-        <li>Content on this site is owned by Grafo Verde unless noted otherwise.</li>
-        <li>Do not misuse the site, attempt unauthorized access, or copy product materials without permission.</li>
-        <li>These terms may be updated as the product grows. Continued use means you accept the current version.</li>
-      </ul>
-      <p>© 2026 Grafo Verde. All rights reserved.</p>
-    </main>
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <div class="site-footer__brand">
-          <a class="brand" href="./">
-            <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
-            <span class="brand__word" aria-hidden="true">ostera</span>
-            <span class="visually-hidden">Hostera</span>
-          </a>
-          <p class="site-footer__tagline">Hotel operations, connected.</p>
-        </div>
-        <nav class="site-footer__nav" aria-label="Footer">
-          <a href="./#solutions">Solutions</a>
-          <a href="./#benefits">Benefits</a>
-          <a href="./#pricing">Pricing</a>
-          <a href="./#product">Product</a>
-          <a href="./#about">About</a>
-          <a href="./#support">Support</a>
+    <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
+    <div class="page">
+      <header class="site-header" data-site-header>
+        <a class="brand" href="./">
+          <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
+          <span class="brand__word" aria-hidden="true">ostera</span>
+          <span class="visually-hidden">Hostera</span>
+        </a>
+        <nav class="site-header__nav" id="primary-nav" aria-label="Primary" data-i18n-aria="nav.primary">
+          <a href="./#solutions" data-i18n="nav.solutions">Solutions</a>
+          <a href="./#features" data-i18n="nav.features">Features</a>
+          <a href="./#pricing" data-i18n="nav.pricing">Pricing</a>
+          <a href="./#product" data-i18n="nav.product">Product</a>
+          <a href="./#about" data-i18n="nav.about">About</a>
         </nav>
-        <div class="site-footer__legal">
-          <a href="terms.html">Terms and Conditions</a>
-          <p class="lang">
-            <a href="./?lang=en" lang="en" hreflang="en" aria-current="page">EN</a>
-            <span aria-hidden="true">/</span>
-            <a href="./?lang=es" lang="es" hreflang="es">ES</a>
-          </p>
-          <p class="site-footer__copy">© 2026 Grafo Verde. All rights reserved.</p>
+        <p class="lang site-header__lang">
+          <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-lang="es" lang="es">ES</button>
+        </p>
+        <a class="site-header__cta" href="./#free">
+          <span data-i18n="cta.free">Start for free</span>
+          <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path
+              d="m12 5 7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          <span class="visually-hidden" data-i18n="nav.menu">Open navigation menu</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </header>
+
+      <main id="main" class="terms">
+        <h1 data-i18n="terms.title">Terms and Conditions</h1>
+        <p class="terms__updated" data-i18n="terms.updated">Last updated: 16 September 2026</p>
+        <p class="terms__intro" data-i18n="terms.intro">
+          These terms govern access to the Hostera website and the Hostera hotel-operations product published by
+          Grafo Verde. By using this site you agree to them. If you do not agree, do not use the site or the product.
+        </p>
+        <h2 data-i18n="terms.h.who">1. Publisher</h2>
+        <p data-i18n="terms.p.who">
+          Hostera is published by Grafo Verde. References to “we”, “us”, or “our” mean Grafo Verde. Hostera is a
+          hotel-operations product for reservations, rooms, inventory, and guest access across one or more properties.
+        </p>
+        <h2 data-i18n="terms.h.site">2. This website</h2>
+        <p data-i18n="terms.p.site">
+          The landing page describes Hostera and lets visitors compare plans, learn about the team, and contact sales.
+          Information on the site is for general presentation. It is not a binding offer, a service-level commitment,
+          or legal, tax, or operational advice.
+        </p>
+        <h2 data-i18n="terms.h.plans">3. Plans and commercial offers</h2>
+        <p data-i18n="terms.p.plans">
+          Free, Professional, and Enterprise are commercial offers described on the site. Features, limits, and
+          availability may change. Starting a Free path, exploring Professional, or talking to sales does not by
+          itself create a paid contract. Enterprise and custom work may require a separate agreement.
+        </p>
+        <h2 data-i18n="terms.h.use">4. Acceptable use</h2>
+        <p data-i18n="terms.p.use">
+          You may browse the site for lawful purposes. You must not misuse the site, attempt unauthorized access,
+          disrupt its operation, scrape it in an abusive way, or copy product materials, marks, or media without
+          permission.
+        </p>
+        <h2 data-i18n="terms.h.ip">5. Intellectual property</h2>
+        <p data-i18n="terms.p.ip">
+          The Hostera name, the Hostera mark, copy, layout, and media on this site are owned by Grafo Verde or used
+          with permission. You do not receive a license to reuse them except as needed to view the site in a browser.
+        </p>
+        <h2 data-i18n="terms.h.data">6. Information you send us</h2>
+        <p data-i18n="terms.p.data">
+          If you submit the sales form, we use the name, organization, and message you provide to follow up about
+          Hostera. Do not send sensitive personal data through that form. We keep that information only as long as
+          needed to respond.
+        </p>
+        <h2 data-i18n="terms.h.changes">7. Changes</h2>
+        <p data-i18n="terms.p.changes">
+          We may update these terms as Hostera grows. The date at the top of this page shows the current version.
+          Continued use of the site after a change means you accept the updated terms.
+        </p>
+        <h2 data-i18n="terms.h.contact">8. Contact</h2>
+        <p data-i18n="terms.p.contact">
+          Questions about these terms or Hostera can be sent through the Talk to sales form on the landing page.
+        </p>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <div class="site-footer__brand">
+            <a class="brand" href="./">
+              <img class="brand__mark" src="public/hostera-mark.svg" width="56" height="56" alt="" />
+              <span class="brand__word" aria-hidden="true">ostera</span>
+              <span class="visually-hidden">Hostera</span>
+            </a>
+            <p class="site-footer__tagline" data-i18n="footer.tagline">Hotel operations, connected.</p>
+          </div>
+          <nav class="site-footer__nav" aria-label="Footer" data-i18n-aria="nav.footer">
+            <a href="./#solutions" data-i18n="nav.solutions">Solutions</a>
+            <a href="./#benefits" data-i18n="nav.benefits">Benefits</a>
+            <a href="./#pricing" data-i18n="nav.pricing">Pricing</a>
+            <a href="./#product" data-i18n="nav.product">Product</a>
+            <a href="./#about" data-i18n="nav.about">About</a>
+            <a href="./#support" data-i18n="nav.support">Support</a>
+          </nav>
+          <div class="site-footer__legal">
+            <a href="terms.html" data-i18n="footer.terms">Terms and Conditions</a>
+            <p class="lang">
+              <button type="button" data-lang="en" lang="en" aria-current="page">EN</button>
+              <span aria-hidden="true">/</span>
+              <button type="button" data-lang="es" lang="es">ES</button>
+            </p>
+            <p class="site-footer__copy" data-i18n="footer.copy">© 2026 Grafo Verde. All rights reserved.</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="js/nav.js" defer></script>
+    <script src="js/i18n.js" defer></script>
   </body>
 </html>

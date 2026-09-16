@@ -1,0 +1,38 @@
+.terms {
+  width: min(720px, calc(100% - 48px));
+  margin: 48px auto 72px;
+}
+
+.terms h1 {
+  margin: 0 0 8px;
+  font-size: clamp(32px, 5vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.terms__updated {
+  margin: 0 0 28px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.terms h2 {
+  margin: 28px 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 26px;
+}
+
+.terms p {
+  margin: 0 0 12px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.terms__intro {
+  color: var(--md-sys-color-on-surface);
+}
