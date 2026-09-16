@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/segments.css" />
     <link rel="stylesheet" href="css/problem.css" />
+    <link rel="stylesheet" href="css/plan-free.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
@@ -102,6 +104,35 @@
           </div>
         </section>
 
+        <section class="segments section-target" id="solutions" aria-labelledby="solutions-heading" tabindex="-1">
+          <div class="segments__inner">
+            <div class="segments__header">
+              <h2 class="segments__title" id="solutions-heading">Built for the way your hotel grows.</h2>
+              <p class="segments__lede">
+                Choose a path based on operational scale. Each one leads to the right Hostera experience.
+              </p>
+            </div>
+            <div class="segments__pathways">
+              <article class="pathway pathway--independent">
+                <div class="pathway__copy">
+                  <p class="pathway__scale">1 PROPERTY · UP TO 10 ROOMS</p>
+                  <h3 class="pathway__title">Independent hotel</h3>
+                  <p class="pathway__body">
+                    Start with reservations, availability and room operations in one clear workspace.
+                  </p>
+                </div>
+                <a class="pathway__cta" href="#free">
+                  Start for free
+                  <svg class="pathway__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section class="problem" aria-labelledby="problem-heading">
           <div class="problem__layout">
             <div class="problem__copy">
@@ -131,20 +162,37 @@
           </div>
         </section>
 
-        <section id="solutions" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">Solutions</h2>
-        </section>
         <section id="features" class="section-target" tabindex="-1">
           <h2 class="visually-hidden">Features</h2>
         </section>
         <section id="benefits" class="section-target" tabindex="-1">
           <h2 class="visually-hidden">Benefits</h2>
         </section>
-        <section id="pricing" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">Pricing</h2>
-        </section>
-        <section id="free" class="section-target" tabindex="-1">
-          <h2 class="visually-hidden">Start for free</h2>
+        <section class="plans section-target" id="pricing" aria-labelledby="free-heading" tabindex="-1">
+          <div class="plans__inner">
+            <article class="plan" id="free">
+              <div>
+                <div class="plan__intro">
+                  <h2 class="plan__name" id="free-heading">Free</h2>
+                  <p class="plan__scope">For one property with up to 10 rooms.</p>
+                </div>
+                <ul class="plan__includes">
+                  <li>Basic reservations and availability</li>
+                  <li>Warehouse without automatic alerts</li>
+                  <li>One simulated RFID reader</li>
+                  <li>One administrator</li>
+                  <li>Community and documentation support</li>
+                </ul>
+              </div>
+              <a class="plan__cta" href="#free">
+                Start for free
+                <svg class="plan__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </article>
+          </div>
         </section>
         <section id="product" class="section-target" tabindex="-1">
           <h2 class="visually-hidden">Product</h2>
