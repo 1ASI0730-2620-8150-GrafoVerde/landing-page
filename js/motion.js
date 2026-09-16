@@ -3,29 +3,33 @@
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const ease = "cubic-bezier(0.16, 1, 0.3, 1)";
-  const header = document.querySelector("[data-site-header]");
 
   if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-  if (window.ScrollToPlugin) gsap.registerPlugin(ScrollToPlugin);
 
-  const headerOffset = () => (header ? header.getBoundingClientRect().height : 80);
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    const id = link.getAttribute("href");
-    if (!id || id === "#") return;
+  const scrollToSection = (id) => {
     const target = document.querySelector(id);
-    if (!target) return;
+    if (!target) return false;
+    target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    return true;
+  };
 
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const y = target.getBoundingClientRect().top + window.scrollY - headerOffset() - 8;
-      if (reduce || !window.ScrollToPlugin) {
-        window.scrollTo(0, Math.max(0, y));
-      } else {
-        gsap.to(window, { duration: 0.55, scrollTo: { y, autoKill: true }, ease });
-      }
-      history.replaceState(null, "", id);
-    });
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || link.target === "_blank") return;
+    const id = link.getAttribute("href");
+    if (!id || id === "#" || !document.querySelector(id)) return;
+
+    event.preventDefault();
+    scrollToSection(id);
+
+    const next = `${location.pathname}${location.search}${id}`;
+    if (`${location.pathname}${location.search}${location.hash}` !== next) {
+      history.pushState(null, "", next);
+    }
+  });
+
+  window.addEventListener("load", () => {
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
   });
 
   document.querySelectorAll(".hero__cta, .site-header__cta, .pathway__cta, .plan__cta, .closing__cta").forEach((el) => {
@@ -63,6 +67,7 @@
     duration: 0.5,
     stagger: 0.09,
     ease,
+    immediateRender: false,
   });
 
   gsap.from(".workflow__step", {
@@ -72,6 +77,7 @@
     duration: 0.45,
     stagger: 0.08,
     ease,
+    immediateRender: false,
   });
 
   gsap.from(".plan", {
@@ -81,6 +87,7 @@
     duration: 0.5,
     stagger: 0.1,
     ease,
+    immediateRender: false,
   });
 
   gsap.from(".member", {
@@ -90,6 +97,7 @@
     duration: 0.4,
     stagger: { each: 0.07, from: "start" },
     ease,
+    immediateRender: false,
   });
 
   gsap.from(".closing__panel", {
@@ -98,5 +106,6 @@
     opacity: 0.85,
     duration: 0.7,
     ease,
+    immediateRender: false,
   });
 })();
