@@ -6,6 +6,9 @@
 }
 
 .plans__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   width: min(var(--container-page), 100%);
 }
 
