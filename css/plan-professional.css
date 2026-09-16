@@ -1,0 +1,24 @@
+.plan--professional {
+  background: var(--md-sys-color-secondary-container);
+  border-color: transparent;
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.plan--professional .plan__name,
+.plan--professional .plan__includes li {
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.plan--professional .plan__scope {
+  color: #345348;
+}
+
+.plan--professional .plan__cta {
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.plan--professional .plan__cta:hover {
+  background: color-mix(in srgb, var(--md-sys-color-primary) 92%, black);
+}
