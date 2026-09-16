@@ -35,6 +35,7 @@
 
 .segments__pathways {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   padding-top: 36px;
 }
@@ -52,6 +53,22 @@
   width: min(520px, 100%);
   background: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+}
+
+.pathway--chain {
+  width: min(344px, 100%);
+  background: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+.pathway--chain .pathway__scale,
+.pathway--chain .pathway__body {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.pathway--chain .pathway__cta {
+  color: var(--md-sys-color-primary);
 }
 
 .pathway__copy {
@@ -111,7 +128,8 @@
     padding-block: 48px;
   }
 
-  .pathway--independent {
+  .pathway--independent,
+  .pathway--chain {
     width: 100%;
   }
 }
