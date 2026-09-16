@@ -13,6 +13,20 @@ html {
   html {
     scroll-behavior: auto;
   }
+
+  .hero__preview,
+  .closing__panel,
+  .hero__copy > *,
+  .hero__actions,
+  .pathway,
+  .workflow__step,
+  .plan,
+  .member {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
 }
 
 body {
