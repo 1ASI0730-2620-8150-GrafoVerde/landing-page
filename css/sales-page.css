@@ -1,0 +1,122 @@
+.sales-page {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-12) clamp(16px, 6vw, 100px) var(--spacing-16);
+  background: var(--md-sys-color-surface);
+}
+
+.sales {
+  width: min(948px, 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.sales__panel {
+  width: 100%;
+  padding: var(--spacing-16);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-large);
+}
+
+.sales__title {
+  margin: 0 0 var(--spacing-4);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.sales__lede {
+  max-width: 38ch;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: clamp(18px, 2.7vw, 30px);
+  line-height: 1.5;
+}
+
+.sales__form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.sales__form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  font-size: clamp(16px, 2.4vw, 28px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.sales__form input,
+.sales__form textarea {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  caret-color: var(--md-sys-color-primary);
+  font: inherit;
+  font-size: 18px;
+}
+
+.sales__form input {
+  min-height: clamp(56px, 8.5vw, 92px);
+}
+
+.sales__form textarea {
+  min-height: clamp(160px, 20vw, 220px);
+  resize: vertical;
+}
+
+.sales__form input:hover,
+.sales__form textarea:hover {
+  border-color: var(--md-sys-color-outline);
+}
+
+.sales__form input:focus-visible,
+.sales__form textarea:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 3px;
+}
+
+.sales__form button {
+  align-self: flex-start;
+  min-height: clamp(56px, 8.5vw, 92px);
+  padding: 0 clamp(24px, 4vw, 44px);
+  border: 0;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font: inherit;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sales__form button:hover {
+  background: color-mix(in srgb, var(--md-sys-color-primary) 92%, black);
+}
+
+.sales__form button:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 4px;
+}
+
+.sales__thanks {
+  margin: 0;
+  color: var(--md-sys-color-primary);
+  font-weight: 500;
+}
+
+.sales__thanks[hidden] {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .sales__panel {
+    padding: var(--spacing-6);
+  }
+}

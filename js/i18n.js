@@ -17,6 +17,8 @@ const translations = {
     "cta.starter": "Explore Starter",
     "cta.professional": "Explore Professional",
     "cta.sales": "Talk to sales",
+    "sales.page.title": "Talk to sales | Hostera",
+    "sales.page.description": "Tell Hostera about your hotel group and discuss the Enterprise plan.",
     "hero.eyebrow": "HOTEL OPERATIONS, CONNECTED",
     "hero.title": "Run your whole hotel operation from one place.",
     "hero.lede": "Manage reservations, rooms, inventory and access across every property.",
@@ -166,7 +168,7 @@ const translations = {
       "We may update these terms as Hostera grows. The date at the top of this page shows the current version. Continued use of the site after a change means you accept the updated terms.",
     "terms.h.contact": "8. Contact",
     "terms.p.contact":
-      "Questions about these terms or Hostera can be sent through the Talk to sales form on the landing page.",
+      "Questions about these terms or Hostera can be sent through the Talk to sales form.",
   },
   es: {
     "meta.title": "Hostera | Operación hotelera, conectada",
@@ -186,6 +188,8 @@ const translations = {
     "cta.starter": "Explorar Starter",
     "cta.professional": "Ver plan Profesional",
     "cta.sales": "Hablar con ventas",
+    "sales.page.title": "Hablar con ventas | Hostera",
+    "sales.page.description": "Cuéntanos sobre tu grupo hotelero y conversemos sobre el plan Empresarial.",
     "hero.eyebrow": "OPERACIÓN HOTELERA, CONECTADA",
     "hero.title": "Gestiona todo tu hotel desde un solo lugar.",
     "hero.lede": "Gestiona reservas, habitaciones, inventario y accesos en todos tus hoteles.",
@@ -336,7 +340,7 @@ const translations = {
       "Podemos actualizar estos términos a medida que Hostera crece. La fecha al inicio de esta página indica la versión vigente. Seguir usando el sitio después de un cambio significa que aceptas los términos actualizados.",
     "terms.h.contact": "8. Contacto",
     "terms.p.contact":
-      "Las preguntas sobre estos términos o sobre Hostera se pueden enviar con el formulario Hablar con ventas de la página de inicio.",
+      "Las preguntas sobre estos términos o sobre Hostera se pueden enviar con el formulario Hablar con ventas.",
   },
 };
 
