@@ -351,11 +351,21 @@ const applyLanguage = (lang) => {
   document.documentElement.lang = lang;
   const titleKey = document.documentElement.dataset.i18nTitle || "meta.title";
   const descKey = document.documentElement.dataset.i18nDescription || "meta.description";
-  document.title = pack[titleKey] || pack["meta.title"];
+  const title = pack[titleKey] || pack["meta.title"];
+  const descriptionText = pack[descKey] || pack["meta.description"];
+  document.title = title;
   const description = document.querySelector('meta[name="description"]');
   if (description) {
-    description.setAttribute("content", pack[descKey] || pack["meta.description"]);
+    description.setAttribute("content", descriptionText);
   }
+  document
+    .querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]')
+    .forEach((meta) => meta.setAttribute("content", title));
+  document
+    .querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]')
+    .forEach((meta) => meta.setAttribute("content", descriptionText));
+  const locale = document.querySelector('meta[property="og:locale"]');
+  if (locale) locale.setAttribute("content", lang === "es" ? "es_ES" : "en_US");
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = pack[node.dataset.i18n];
