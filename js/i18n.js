@@ -14,9 +14,11 @@ const translations = {
     "nav.benefits": "Benefits",
     "nav.support": "Support",
     "nav.menu": "Open navigation menu",
-    "cta.free": "Start for free",
+    "cta.starter": "Explore Starter",
     "cta.professional": "Explore Professional",
     "cta.sales": "Talk to sales",
+    "sales.page.title": "Talk to sales | Hostera",
+    "sales.page.description": "Tell Hostera about your hotel group and discuss the Enterprise plan.",
     "hero.eyebrow": "HOTEL OPERATIONS, CONNECTED",
     "hero.title": "Run your whole hotel operation from one place.",
     "hero.lede": "Manage reservations, rooms, inventory and access across every property.",
@@ -66,16 +68,24 @@ const translations = {
     "workflow.s4.body":
       "Manage reservations, room status, access and stock from the dashboard.",
     "plans.title": "A plan for each operating scale.",
-    "plans.lede": "Start with one hotel or choose the plan built for your operating scale.",
-    "plan.free.name": "Free",
-    "plan.free.scope": "For one property with up to 10 rooms.",
-    "plan.free.i1": "Basic reservations and availability",
-    "plan.free.i2": "Warehouse without automatic alerts",
-    "plan.free.i3": "One simulated RFID reader",
-    "plan.free.i4": "One administrator",
-    "plan.free.i5": "Community and documentation support",
+    "plans.lede":
+      "Choose Starter for one hotel, Professional for a growing chain, or talk to sales about your hotel group.",
+    "plan.starter.name": "Starter",
+    "plan.starter.scope": "For one property with up to 10 rooms.",
+    "plan.starter.price.amount": "S/39",
+    "plan.starter.price.period": "per property / month",
+    "plan.starter.i1": "Basic reservations and availability",
+    "plan.starter.i2": "Warehouse without automatic alerts",
+    "plan.starter.i3": "One simulated RFID reader",
+    "plan.starter.i4": "One administrator",
+    "plan.starter.i5": "Community and documentation support",
     "plan.pro.name": "Professional",
     "plan.pro.scope": "For hotel chains with 2 to 5 locations.",
+    "plan.pro.price.label": "Estimated monthly total",
+    "plan.pro.price.period": "estimated / month",
+    "plan.pro.price.rate": "rooms × S/8 per room",
+    "plan.pro.rooms.label": "Total rooms across your hotels",
+    "plan.pro.rooms.error": "Enter a valid whole number of rooms, 1 or more.",
     "plan.pro.i1": "Unlimited rooms across locations",
     "plan.pro.i2": "Automatic critical-stock alerts",
     "plan.pro.i3": "Up to 25 RFID readers",
@@ -111,7 +121,7 @@ const translations = {
       "Start with one hotel and change plans whenever your operation needs room to grow.",
     "support.note": "AVAILABLE IN ENGLISH AND SPANISH",
     "faq.q1": "Can I start with one hotel?",
-    "faq.a1": "Yes. The Free plan supports one hotel with up to 10 rooms and one administrator.",
+    "faq.a1": "Yes. Starter supports one hotel with up to 10 rooms and one administrator.",
     "faq.q2": "What changes with Professional?",
     "faq.a2":
       "Professional adds multiple locations, unlimited rooms, stock alerts, reports and role-based administration.",
@@ -143,7 +153,7 @@ const translations = {
       "The landing page describes Hostera and lets visitors compare plans, learn about the team, and contact sales. Information on the site is for general presentation. It is not a binding offer, a service-level commitment, or legal, tax, or operational advice.",
     "terms.h.plans": "3. Plans and commercial offers",
     "terms.p.plans":
-      "Free, Professional, and Enterprise are commercial offers described on the site. Features, limits, and availability may change. Starting a Free path, exploring Professional, or talking to sales does not by itself create a paid contract. Enterprise and custom work may require a separate agreement.",
+      "Starter, Professional, and Enterprise are commercial offers described on the site. Features, limits, prices, and availability may change. Choosing Starter, exploring Professional, or talking to sales does not by itself create a paid contract. Enterprise and custom work may require a separate agreement.",
     "terms.h.use": "4. Acceptable use",
     "terms.p.use":
       "You may browse the site for lawful purposes. You must not misuse the site, attempt unauthorized access, disrupt its operation, scrape it in an abusive way, or copy product materials, marks, or media without permission.",
@@ -158,7 +168,7 @@ const translations = {
       "We may update these terms as Hostera grows. The date at the top of this page shows the current version. Continued use of the site after a change means you accept the updated terms.",
     "terms.h.contact": "8. Contact",
     "terms.p.contact":
-      "Questions about these terms or Hostera can be sent through the Talk to sales form on the landing page.",
+      "Questions about these terms or Hostera can be sent through the Talk to sales form.",
   },
   es: {
     "meta.title": "Hostera | Operación hotelera, conectada",
@@ -175,9 +185,11 @@ const translations = {
     "nav.benefits": "Beneficios",
     "nav.support": "Soporte",
     "nav.menu": "Abrir menú de navegación",
-    "cta.free": "Comenzar gratis",
+    "cta.starter": "Explorar Starter",
     "cta.professional": "Ver plan Profesional",
     "cta.sales": "Hablar con ventas",
+    "sales.page.title": "Hablar con ventas | Hostera",
+    "sales.page.description": "Cuéntanos sobre tu grupo hotelero y conversemos sobre el plan Empresarial.",
     "hero.eyebrow": "OPERACIÓN HOTELERA, CONECTADA",
     "hero.title": "Gestiona todo tu hotel desde un solo lugar.",
     "hero.lede": "Gestiona reservas, habitaciones, inventario y accesos en todos tus hoteles.",
@@ -228,16 +240,23 @@ const translations = {
       "Controla reservas, estado de habitaciones, accesos e inventario desde el panel.",
     "plans.title": "Un plan para cada escala operativa.",
     "plans.lede":
-      "Empieza gratis, pasa a Profesional cuando crezcas o solicita una solución para tu grupo hotelero.",
-    "plan.free.name": "Gratis",
-    "plan.free.scope": "Para un hotel con hasta 10 habitaciones.",
-    "plan.free.i1": "Reservas y disponibilidad básicas",
-    "plan.free.i2": "Inventario sin alertas automáticas",
-    "plan.free.i3": "Un lector RFID simulado",
-    "plan.free.i4": "Un administrador",
-    "plan.free.i5": "Soporte por comunidad y documentación",
+      "Elige Starter para un hotel, Profesional para una cadena en crecimiento o solicita una solución para tu grupo hotelero.",
+    "plan.starter.name": "Starter",
+    "plan.starter.scope": "Para un hotel con hasta 10 habitaciones.",
+    "plan.starter.price.amount": "S/39",
+    "plan.starter.price.period": "por propiedad / mes",
+    "plan.starter.i1": "Reservas y disponibilidad básicas",
+    "plan.starter.i2": "Inventario sin alertas automáticas",
+    "plan.starter.i3": "Un lector RFID simulado",
+    "plan.starter.i4": "Un administrador",
+    "plan.starter.i5": "Soporte por comunidad y documentación",
     "plan.pro.name": "Profesional",
     "plan.pro.scope": "Para cadenas hoteleras con 2 a 5 hoteles.",
+    "plan.pro.price.label": "Total mensual estimado",
+    "plan.pro.price.period": "estimado / mes",
+    "plan.pro.price.rate": "habitaciones × S/8 por habitación",
+    "plan.pro.rooms.label": "Total de habitaciones entre tus hoteles",
+    "plan.pro.rooms.error": "Ingresa un número entero válido de habitaciones, 1 o más.",
     "plan.pro.i1": "Habitaciones ilimitadas entre hoteles",
     "plan.pro.i2": "Alertas automáticas de inventario crítico",
     "plan.pro.i3": "Hasta 25 lectores RFID",
@@ -273,7 +292,7 @@ const translations = {
       "Empieza con un solo hotel y cambia de plan cuando tu operación necesite crecer.",
     "support.note": "DISPONIBLE EN ESPAÑOL E INGLÉS",
     "faq.q1": "¿Puedo comenzar con un solo hotel?",
-    "faq.a1": "Sí. El plan Gratis admite un hotel con hasta 10 habitaciones y un administrador.",
+    "faq.a1": "Sí. Starter admite un hotel con hasta 10 habitaciones y un administrador.",
     "faq.q2": "¿Qué incluye el plan Profesional?",
     "faq.a2":
       "Profesional incluye varios hoteles, habitaciones ilimitadas, alertas de inventario, reportes y administración por roles.",
@@ -306,7 +325,7 @@ const translations = {
       "La página de inicio presenta Hostera y permite comparar planes, conocer al equipo y contactar a ventas. La información del sitio es de carácter general. No constituye una oferta vinculante, un compromiso de nivel de servicio ni asesoramiento legal, fiscal u operativo.",
     "terms.h.plans": "3. Planes y ofertas comerciales",
     "terms.p.plans":
-      "Gratis, Profesional y Empresarial son ofertas comerciales descritas en el sitio. Las funciones, los límites y la disponibilidad pueden cambiar. Iniciar el camino Gratis, explorar Profesional o hablar con ventas no crea por sí solo un contrato de pago. El plan Empresarial y el trabajo a medida pueden requerir un acuerdo aparte.",
+      "Starter, Profesional y Empresarial son ofertas comerciales descritas en el sitio. Las funciones, los límites, los precios y la disponibilidad pueden cambiar. Elegir Starter, explorar Profesional o hablar con ventas no crea por sí solo un contrato de pago. El plan Empresarial y el trabajo a medida pueden requerir un acuerdo aparte.",
     "terms.h.use": "4. Uso aceptable",
     "terms.p.use":
       "Puedes navegar el sitio con fines lícitos. No debes hacer un uso indebido del sitio, intentar un acceso no autorizado, interrumpir su funcionamiento, extraer datos de forma abusiva ni copiar materiales, marcas o medios del producto sin permiso.",
@@ -321,7 +340,7 @@ const translations = {
       "Podemos actualizar estos términos a medida que Hostera crece. La fecha al inicio de esta página indica la versión vigente. Seguir usando el sitio después de un cambio significa que aceptas los términos actualizados.",
     "terms.h.contact": "8. Contacto",
     "terms.p.contact":
-      "Las preguntas sobre estos términos o sobre Hostera se pueden enviar con el formulario Hablar con ventas de la página de inicio.",
+      "Las preguntas sobre estos términos o sobre Hostera se pueden enviar con el formulario Hablar con ventas.",
   },
 };
 
@@ -332,11 +351,21 @@ const applyLanguage = (lang) => {
   document.documentElement.lang = lang;
   const titleKey = document.documentElement.dataset.i18nTitle || "meta.title";
   const descKey = document.documentElement.dataset.i18nDescription || "meta.description";
-  document.title = pack[titleKey] || pack["meta.title"];
+  const title = pack[titleKey] || pack["meta.title"];
+  const descriptionText = pack[descKey] || pack["meta.description"];
+  document.title = title;
   const description = document.querySelector('meta[name="description"]');
   if (description) {
-    description.setAttribute("content", pack[descKey] || pack["meta.description"]);
+    description.setAttribute("content", descriptionText);
   }
+  document
+    .querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]')
+    .forEach((meta) => meta.setAttribute("content", title));
+  document
+    .querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]')
+    .forEach((meta) => meta.setAttribute("content", descriptionText));
+  const locale = document.querySelector('meta[property="og:locale"]');
+  if (locale) locale.setAttribute("content", lang === "es" ? "es_ES" : "en_US");
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = pack[node.dataset.i18n];
@@ -358,6 +387,8 @@ const applyLanguage = (lang) => {
     if (current) control.setAttribute("aria-current", "page");
     else control.removeAttribute("aria-current");
   });
+
+  document.dispatchEvent(new Event("hostera:languagechange"));
 };
 
 const setLanguage = (lang) => {
