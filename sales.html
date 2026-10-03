@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  data-i18n-title="terms.meta.title"
-  data-i18n-description="terms.meta.description"
+  data-i18n-title="sales.page.title"
+  data-i18n-description="sales.page.description"
 >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Terms and Conditions | Hostera</title>
+    <title>Talk to sales | Hostera</title>
     <meta
       name="description"
-      content="Terms that govern use of the Hostera landing page and Hostera services published by Grafo Verde."
+      content="Tell Hostera about your hotel group and discuss the Enterprise plan."
     />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/400.css" />
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/terms.css" />
+    <link rel="stylesheet" href="css/sales-page.css" />
   </head>
   <body>
     <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
@@ -48,14 +48,7 @@
           <span data-i18n="cta.starter">Explore Starter</span>
           <svg class="site-header__cta-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            <path
-              d="m12 5 7 7-7 7"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+            <path d="m12 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
@@ -66,56 +59,33 @@
         </button>
       </header>
 
-      <main id="main" class="terms">
-        <h1 data-i18n="terms.title">Terms and Conditions</h1>
-        <p class="terms__updated" data-i18n="terms.updated">Last updated: 16 September 2026</p>
-        <p class="terms__intro" data-i18n="terms.intro">
-          These terms govern access to the Hostera website and the Hostera hotel-operations product published by
-          Grafo Verde. By using this site you agree to them. If you do not agree, do not use the site or the product.
-        </p>
-        <h2 data-i18n="terms.h.who">1. Publisher</h2>
-        <p data-i18n="terms.p.who">
-          Hostera is published by Grafo Verde. References to “we”, “us”, or “our” mean Grafo Verde. Hostera is a
-          hotel-operations product for reservations, rooms, inventory, and guest access across one or more properties.
-        </p>
-        <h2 data-i18n="terms.h.site">2. This website</h2>
-        <p data-i18n="terms.p.site">
-          The landing page describes Hostera and lets visitors compare plans, learn about the team, and contact sales.
-          Information on the site is for general presentation. It is not a binding offer, a service-level commitment,
-          or legal, tax, or operational advice.
-        </p>
-        <h2 data-i18n="terms.h.plans">3. Plans and commercial offers</h2>
-        <p data-i18n="terms.p.plans">
-          Starter, Professional, and Enterprise are commercial offers described on the site. Features, limits,
-          prices, and availability may change. Choosing Starter, exploring Professional, or talking to sales does
-          not by itself create a paid contract. Enterprise and custom work may require a separate agreement.
-        </p>
-        <h2 data-i18n="terms.h.use">4. Acceptable use</h2>
-        <p data-i18n="terms.p.use">
-          You may browse the site for lawful purposes. You must not misuse the site, attempt unauthorized access,
-          disrupt its operation, scrape it in an abusive way, or copy product materials, marks, or media without
-          permission.
-        </p>
-        <h2 data-i18n="terms.h.ip">5. Intellectual property</h2>
-        <p data-i18n="terms.p.ip">
-          The Hostera name, the Hostera mark, copy, layout, and media on this site are owned by Grafo Verde or used
-          with permission. You do not receive a license to reuse them except as needed to view the site in a browser.
-        </p>
-        <h2 data-i18n="terms.h.data">6. Information you send us</h2>
-        <p data-i18n="terms.p.data">
-          If you submit the sales form, we use the name, organization, and message you provide to follow up about
-          Hostera. Do not send sensitive personal data through that form. We keep that information only as long as
-          needed to respond.
-        </p>
-        <h2 data-i18n="terms.h.changes">7. Changes</h2>
-        <p data-i18n="terms.p.changes">
-          We may update these terms as Hostera grows. The date at the top of this page shows the current version.
-          Continued use of the site after a change means you accept the updated terms.
-        </p>
-        <h2 data-i18n="terms.h.contact">8. Contact</h2>
-        <p data-i18n="terms.p.contact">
-          Questions about these terms or Hostera can be sent through the Talk to sales form.
-        </p>
+      <main id="main" class="sales-page">
+        <section class="sales" aria-labelledby="sales-heading">
+          <div class="sales__panel">
+            <h1 class="sales__title" id="sales-heading" data-i18n="sales.title">Talk to sales</h1>
+            <p class="sales__lede" data-i18n="sales.lede">
+              Tell us about your hotel group and we will follow up about the Enterprise path.
+            </p>
+            <form class="sales__form" data-sales-form>
+              <label>
+                <span data-i18n="sales.name">Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span data-i18n="sales.org">Hotel or group</span>
+                <input type="text" name="organization" autocomplete="organization" required />
+              </label>
+              <label>
+                <span data-i18n="sales.message">Message</span>
+                <textarea name="message" rows="4" required></textarea>
+              </label>
+              <button type="submit" data-i18n="cta.sales">Talk to sales</button>
+              <p class="sales__thanks" data-sales-thanks hidden aria-live="polite" data-i18n="sales.thanks">
+                Thanks. A Hostera teammate will follow up.
+              </p>
+            </form>
+          </div>
+        </section>
       </main>
 
       <footer class="site-footer">
@@ -149,6 +119,7 @@
       </footer>
     </div>
     <script src="js/nav.js" defer></script>
+    <script src="js/sales.js" defer></script>
     <script src="js/i18n.js" defer></script>
   </body>
 </html>
