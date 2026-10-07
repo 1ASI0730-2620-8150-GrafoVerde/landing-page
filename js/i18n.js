@@ -3,6 +3,9 @@ const translations = {
     "meta.title": "Hostera | Hotel operations, connected",
     "meta.description":
       "Run reservations, rooms, inventory and access across every property from one place.",
+    "meta.keywords": "hotel operations, hotel management platform, reservations, room availability, inventory, RFID access",
+    "sales.page.keywords": "hotel management platform, hotel group, Hostera plans, talk to sales",
+    "terms.meta.keywords": "Hostera terms and conditions, hotel management platform, Grafo Verde",
     "skip": "Skip to content",
     "nav.primary": "Primary",
     "nav.footer": "Footer",
@@ -175,6 +178,9 @@ const translations = {
     "meta.title": "Hostera | Operación hotelera, conectada",
     "meta.description":
       "Gestiona reservas, habitaciones, inventario y accesos en todos tus hoteles desde un solo lugar.",
+    "meta.keywords": "operación hotelera, plataforma de gestión hotelera, reservas, disponibilidad de habitaciones, inventario, accesos RFID",
+    "sales.page.keywords": "plataforma de gestión hotelera, grupo hotelero, planes de Hostera, hablar con ventas",
+    "terms.meta.keywords": "términos y condiciones de Hostera, plataforma de gestión hotelera, Grafo Verde",
     "skip": "Saltar al contenido",
     "nav.primary": "Principal",
     "nav.footer": "Pie de página",
@@ -355,10 +361,16 @@ const applyLanguage = (lang) => {
   const descKey = document.documentElement.dataset.i18nDescription || "meta.description";
   const title = pack[titleKey] || pack["meta.title"];
   const descriptionText = pack[descKey] || pack["meta.description"];
+  const keywordsKey = document.documentElement.dataset.i18nKeywords || "meta.keywords";
+  const keywordsText = pack[keywordsKey] || pack["meta.keywords"];
   document.title = title;
   const description = document.querySelector('meta[name="description"]');
   if (description) {
     description.setAttribute("content", descriptionText);
+  }
+  const keywords = document.querySelector('meta[name="keywords"]');
+  if (keywords) {
+    keywords.setAttribute("content", keywordsText);
   }
   document
     .querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]')
@@ -367,7 +379,7 @@ const applyLanguage = (lang) => {
     .querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]')
     .forEach((meta) => meta.setAttribute("content", descriptionText));
   const locale = document.querySelector('meta[property="og:locale"]');
-  if (locale) locale.setAttribute("content", lang === "es" ? "es_ES" : "en_US");
+  if (locale) locale.setAttribute("content", lang === "es" ? "es_419" : "en_US");
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = pack[node.dataset.i18n];
