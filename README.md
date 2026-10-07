@@ -9,20 +9,20 @@ This repository is the **public landing page** for that product: a static site i
 ## What the page covers
 
 - Product proposition and a dashboard preview of daily operations
-- Paths by scale: independent hotel (Free), small chain (Professional), hotel group (Enterprise)
+- Paths by scale: independent hotel (Starter), small chain (Professional), hotel group (sales contact)
 - Why operations break when information lives in different places
 - Benefits (inventory, access) and a four-step setup flow
 - Plan comparison, sales contact, team, FAQ, and terms
 
-Live section links, language (EN/ES), and the terms page all stay on this static site.
+Section links, the language switch (EN/ES), the sales contact and the terms page stay on this static site. The sign-in link and the plan buttons open the Hostera web application at https://hostera-f4116.web.app/.
 
 ## Plans (as presented on the page)
 
-| Plan             | For                           | Next step            |
-| ---------------- | ----------------------------- | -------------------- |
-| **Free**         | One property, up to 10 rooms  | Start for free       |
-| **Professional** | Chains with 2–5 locations     | Explore Professional |
-| **Enterprise**   | Large or multinational groups | Talk to sales        |
+| Plan             | For                           | Price                       | Next step            |
+| ---------------- | ----------------------------- | --------------------------- | -------------------- |
+| **Starter**      | One property, up to 10 rooms  | S/39 per property per month | Explore Starter      |
+| **Professional** | Chains with 2 to 5 locations  | S/8 per room per month      | Explore Professional |
+| **Hotel groups** | Larger operations             | Agreed with sales           | Talk to sales        |
 
 ## Run locally
 
@@ -39,7 +39,7 @@ Then open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
 - HTML, CSS, and JavaScript (no framework)
 - In-page English/Spanish copy in `js/i18n.js`
 - GSAP (CDN) for hero and scroll motion
-- Git Flow (`main` / `develop`, releases tagged `v0.2.0` and later)
+- Git Flow (`main` / `develop`, releases tagged from `v0.1.0`)
 
 User stories for the landing page live in [`docs/user-stories.md`](docs/user-stories.md).
 

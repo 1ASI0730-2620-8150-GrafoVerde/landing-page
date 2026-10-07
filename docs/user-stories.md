@@ -4,297 +4,257 @@
 
 **License**: See [LICENSE.md](../LICENSE.md) for details.
 
+These user stories match the landing page epic (`EP001`) of the Hostera project report.
+
 ## Requirements Traceability Matrix (RTM)
 
 | Story ID | User Story Title | Bounded Context(s) | Domain Components | Architectural Decisions |
 |---|---|---|---|---|
 | US001 | Understand the hotel-operations proposition | None | None | None |
-| US002 | Navigate the Landing Page sections and footer | None | None | None |
+| US002 | Find information about Hostera | None | None | None |
 | US003 | Find the independent-hotel path | None | None | None |
 | US004 | Find the small-chain path | None | None | None |
 | US005 | Understand the product benefits and operating flow | None | None | None |
 | US006 | Compare plans and choose a next step | None | None | None |
 | US007 | Explore product, team, and support content | None | None | None |
-| US008 | Use the English and Spanish Landing Page variants | None | None | None |
+| US008 | Consult Hostera information in English or Spanish | None | None | None |
 
 ---
 
 ## US001: Understand the hotel-operations proposition
 
-As a visitor, I want to understand what Hostera offers for hotel operations, so that I can decide whether the Landing Page is relevant to my hotel.
+As a visitor, I want to understand what Hostera offers for hotel operations, so that I can decide whether Hostera is relevant to my hotel.
 
-### Scenario: The hero states the product proposition
+### Scenario: The visitor identifies the value proposition
 
-- **Given** the visitor opens the Landing Page
-- **When** the visitor reads the hero section
-- **Then** the page presents the message “HOTEL OPERATIONS, CONNECTED” and the proposition “Run your whole hotel operation from one place.”
+- **Given** a visitor evaluates Hostera for the first time
+- **When** the visitor requests the value proposition
+- **Then** the visitor learns that Hostera allows running the whole hotel operation from one place.
 
-### Scenario: The hero names the covered operational areas
+### Scenario: The visitor identifies the operational areas covered
 
-- **Given** the visitor is reading the hero description
-- **When** the visitor reviews the supporting text
-- **Then** the page identifies reservations, rooms, inventory, and access across every property.
+- **Given** the visitor is reviewing the value proposition
+- **When** the visitor looks for the scope of the product
+- **Then** the visitor finds that Hostera covers reservations, rooms, inventory, and access across every property.
 
-### Scenario: The hero CTA opens the Free experience entry point
+### Scenario: The visitor recognizes the problem Hostera addresses
 
-- **Given** the visitor is viewing the hero section
-- **When** the visitor selects “Start for free”
-- **Then** the page takes the visitor to the entry point for starting the Free experience.
+- **Given** the visitor continues reviewing the content
+- **When** the visitor reads about current hotel operations
+- **Then** the visitor learns that operations break when information is kept in different places and that Hostera connects reservations, rooms, inventory, and guest access in the same operational picture.
 
-### Scenario: The dashboard preview summarizes hotel operations
+### Scenario: The visitor continues to the entry plan
 
-- **Given** the visitor is viewing the dashboard preview in the hero section
-- **When** the visitor reviews the preview
-- **Then** the Landing Page presents an informational overview of reservations, room status, inventory, and access rather than an interactive dashboard.
+- **Given** the visitor wants to evaluate Hostera after reading the value proposition
+- **When** the visitor chooses to continue
+- **Then** the system provides the Starter plan information.
 
-### Scenario: The page explains the problem and solution
+---
 
-- **Given** the visitor continues through the Landing Page
-- **When** the visitor reaches the problem-and-solution section
-- **Then** the page explains that hotel operations break when information is kept in different places and presents Hostera as connecting reservations, rooms, inventory, and guest access.
+## US002: Find information about Hostera
 
-## US002: Navigate the Landing Page sections and footer
+As a visitor, I want to request information about the topic I am interested in, so that I can learn about Hostera and understand the available next steps.
 
-As a visitor, I want clearly labeled navigation, so that I can find the Landing Page content and understand the available next steps.
+### Scenario: The visitor requests information about a topic
 
-### Scenario: The header exposes the primary navigation labels
+- **Given** a visitor wants information about a specific topic
+- **When** the visitor chooses solutions, features, pricing, product, or team information
+- **Then** the system provides information about the requested topic.
 
-- **Given** the visitor is at the top of the English Landing Page
-- **When** the visitor reviews the header
-- **Then** the page exposes the labels “Solutions”, “Features”, “Pricing”, “Product”, and “About”, together with the “EN / ES” language control and the “Start for free” CTA.
+### Scenario: The visitor changes topic from any point
 
-### Scenario: The footer exposes the secondary navigation and legal entry
+- **Given** the visitor is consulting information about Hostera
+- **When** the visitor wants to consult another topic
+- **Then** the system provides the requested topic independently of the topic previously consulted.
 
-- **Given** the visitor reaches the footer
-- **When** the visitor reviews the available links and labels
-- **Then** the page exposes “Solutions”, “Benefits”, “Pricing”, “Product”, “About”, “Support”, “Terms and Conditions”, and an “EN / ES” language control.
+### Scenario: The visitor finds support and the service terms
 
-### Scenario: The footer identifies the publisher
+- **Given** the visitor has reviewed the main content
+- **When** the visitor looks for support or for the conditions of the service
+- **Then** the visitor finds the frequently asked questions and the Terms and Conditions of Hostera.
 
-- **Given** the visitor reviews the footer
-- **When** the visitor reads the supporting information
-- **Then** the page identifies Hostera with the statement “Hotel operations, connected.” and shows the copyright notice for Grafo Verde.
+### Scenario: The visitor identifies who offers the product
 
-### Scenario: Header navigation takes the visitor to the selected section
+- **Given** the visitor wants to know who is responsible for Hostera
+- **When** the visitor reviews the company information
+- **Then** the visitor identifies Hostera, its statement “Hotel operations, connected.”, and Grafo Verde as the copyright holder.
 
-- **Given** the visitor is viewing the Landing Page
-- **When** the visitor selects “Solutions”, “Features”, “Pricing”, “Product”, or “About” in the header
-- **Then** the page takes the visitor to the corresponding Landing Page section.
-
-### Scenario: Footer navigation takes the visitor to the selected destination
-
-- **Given** the visitor is viewing the footer
-- **When** the visitor selects “Solutions”, “Benefits”, “Pricing”, “Product”, “About”, or “Support”
-- **Then** the page takes the visitor to the corresponding Landing Page section.
-
-### Scenario: The legal link opens the terms content
-
-- **Given** the visitor is viewing the footer
-- **When** the visitor selects “Terms and Conditions”
-- **Then** the page opens the service terms content.
+---
 
 ## US003: Find the independent-hotel path
 
-As an independent hotel administrator or owner, I want a path for one property with up to 10 rooms, so that I can identify the entry point intended for my operation.
+As a visitor from the independent-hotel segment, I want to identify the Hostera option for one property with up to 10 rooms, so that I can confirm that it fits my operation and continue with the corresponding plan.
 
-### Scenario: The independent-hotel pathway is distinct
+### Scenario: The visitor identifies the independent-hotel option
 
-- **Given** the visitor operates one independent hotel with up to 10 rooms
-- **When** the visitor reaches the target-segments section
-- **Then** the page presents “1 PROPERTY · UP TO 10 ROOMS”, the title “Independent hotel”, and a description about starting with reservations, availability, and room operations in one place.
+- **Given** a visitor operates one independent hotel with up to 10 rooms
+- **When** the visitor reviews the options by operating scale
+- **Then** the visitor identifies the “Independent hotel” option for one property with up to 10 rooms, focused on reservations, availability, and room operations with consistent operational information.
 
-### Scenario: The independent-hotel CTA is visible
+### Scenario: The visitor reviews the Starter plan conditions
 
-- **Given** the independent-hotel pathway is visible
-- **When** the visitor looks for the next action
-- **Then** the page presents the “Start for free” CTA for that pathway.
+- **Given** the visitor evaluates the Starter plan
+- **When** the visitor reviews its conditions
+- **Then** the visitor learns that it costs S/39 per property per month and includes basic reservations and availability, inventory without automatic alerts, one simulated RFID reader, one administrator, and community and documentation support.
 
-### Scenario: The free-plan content supports the independent-hotel path
+### Scenario: The visitor continues with the Starter plan
 
-- **Given** the visitor evaluates the Free plan
-- **When** the visitor reads its plan details
-- **Then** the page states that the plan is for one property with up to 10 rooms and lists basic reservations and availability, warehouse without automatic alerts, one simulated RFID reader, one administrator, and community and documentation support.
+- **Given** the visitor considers that the independent-hotel option fits the operation
+- **When** the visitor decides to continue
+- **Then** the system provides the Starter plan information.
 
-### Scenario: The independent-hotel CTA opens the appropriate entry point
-
-- **Given** the visitor is viewing the independent-hotel pathway
-- **When** the visitor selects “Start for free”
-- **Then** the page takes the visitor to the entry point for starting the Free experience for an independent hotel.
+---
 
 ## US004: Find the small-chain path
 
-As a small-chain hotel operations manager, I want a path for coordinating 2 to 5 locations, so that I can identify the plan and next step intended for a multi-property operation.
+As a small-chain hotel operations manager, I want an option for coordinating 2 to 5 locations, so that I can identify the plan and estimated cost intended for a multi-property operation.
 
-### Scenario: The small-chain pathway is distinct
+### Scenario: The visitor identifies the small-chain option
 
-- **Given** the visitor is responsible for a small chain with 2 to 5 locations
-- **When** the visitor reaches the target-segments section
-- **Then** the page presents “2-5 LOCATIONS”, the title “Small hotel chain”, and a description about coordinating rooms, stock, and reports across every property.
+- **Given** the visitor is responsible for a hotel chain with 2 to 5 locations
+- **When** the visitor reviews the options by operating scale
+- **Then** the visitor identifies the “Small hotel chain” option for coordinating rooms, stock, and reports across every property.
 
-### Scenario: The small-chain CTA identifies the Professional path
-
-- **Given** the small-chain pathway is visible
-- **When** the visitor looks for the next action
-- **Then** the page presents the “Explore Professional” CTA.
-
-### Scenario: The Professional plan content supports the small-chain path
+### Scenario: The visitor reviews the Professional plan conditions
 
 - **Given** the visitor evaluates the Professional plan
-- **When** the visitor reads its plan details
-- **Then** the page states that the plan is for hotel chains with 2 to 5 locations and lists unlimited rooms across locations, automatic critical-stock alerts, up to 25 RFID readers, reports by location, five administrators with roles, and priority chat and email support.
+- **When** the visitor reviews its conditions
+- **Then** the visitor learns that it is intended for hotel chains with 2 to 5 locations, costs S/8 per room per month, and includes unlimited rooms across locations, automatic critical-stock alerts, up to 25 RFID readers, reports by location, five administrators with roles, and priority chat and email support.
 
-### Scenario: The small-chain CTA opens the appropriate entry point
+### Scenario: The visitor estimates the monthly cost
 
-- **Given** the visitor is viewing the small-chain pathway
-- **When** the visitor selects “Explore Professional”
-- **Then** the page takes the visitor to the entry point for evaluating the Professional experience for a small hotel chain.
+- **Given** the visitor knows the total number of rooms across the chain's hotels
+- **When** the visitor provides that number of rooms
+- **Then** the system calculates the estimated monthly cost at S/8 per room, so 25 rooms correspond to S/200.
+
+### Scenario: The visitor provides an invalid number of rooms
+
+- **Given** the visitor provides a value that is not a whole number of 1 or more
+- **When** the estimate is calculated
+- **Then** the system does not calculate the cost and indicates that a whole number of rooms of 1 or more is required.
+
+### Scenario: The visitor continues with the Professional plan
+
+- **Given** the visitor considers that the small-chain option fits the operation
+- **When** the visitor decides to continue
+- **Then** the system provides the Professional plan information.
+
+---
 
 ## US005: Understand the product benefits and operating flow
 
 As a visitor, I want to understand the benefits and the high-level operating flow described by Hostera, so that I can relate the proposition to hotel work.
 
-### Scenario: The benefits section summarizes connected daily operations
+### Scenario: The visitor learns the benefit of connected operations
 
-- **Given** the visitor reaches the benefits section
-- **When** the visitor reads its heading and supporting copy
-- **Then** the page describes daily operations connected across every property and names occupancy, room readiness, inventory, and guest access.
+- **Given** the visitor wants to know the benefits of Hostera
+- **When** the visitor reviews them
+- **Then** the visitor learns that Hostera coordinates occupancy, room readiness, inventory, and guest access across every property with consistent operational information.
 
-### Scenario: The page presents the evidenced benefit examples
+### Scenario: The visitor reviews specific benefits
 
-- **Given** the visitor reviews the benefit examples
-- **When** the visitor reads the benefit cards
-- **Then** the page presents “Centralized inventory” with critical-shortage flagging and “Access controls by property” with staff access limited to the properties they need.
+- **Given** the visitor looks for examples of those benefits
+- **When** the visitor reviews them
+- **Then** the visitor finds RFID guest access designed for hospitality, centralized inventory by property with automatic flagging of critical shortages, and access controls that give staff access only to the properties they need.
 
-### Scenario: The page presents the four-step operating flow
+### Scenario: The visitor learns how to start operating
 
-- **Given** the visitor reaches “How Hostera works”
-- **When** the visitor reviews the sequence
-- **Then** the page presents four steps: “Add hotels”, “Set up your team”, “Connect systems”, and “Run operations”.
+- **Given** the visitor wants to know how a hotel starts using Hostera
+- **When** the visitor reviews the operating flow
+- **Then** the visitor learns the four steps: add hotels and define their rooms, set up the team and assign access by role, connect RFID readers and configure inventory workflows, and manage reservations, room status, access, and stock from one place.
 
-### Scenario: Each workflow step has supporting content
-
-- **Given** the visitor reads the four workflow steps
-- **When** the visitor reviews their descriptions
-- **Then** the page explains defining rooms, inviting staff and assigning access by role, pairing RFID readers and configuring inventory workflows, and managing reservations, room status, access, and stock from one place.
+---
 
 ## US006: Compare plans and choose a next step
 
-As a visitor, I want to compare the plans and see clear next actions, including the open Hotel group / Enterprise commercial option, so that I can choose the path that matches my operating scale.
+As a visitor, I want to compare the plans and understand the available next steps, including the open Hotel group / Enterprise commercial option, so that I can choose the path that matches my operating scale.
 
-The Hotel group / Enterprise option is an open commercial pathway for larger or multi-country operations, not a third validated target segment.
+### Scenario: The visitor compares the plans by operating scale
 
-### Scenario: The pricing section shows the operating-scale options
+- **Given** the visitor wants to compare the available plans
+- **When** the visitor reviews the pricing information
+- **Then** the visitor finds Starter for one property with up to 10 rooms at S/39 per property per month, Professional for chains with 2 to 5 locations at S/8 per room per month, and Enterprise for large or multinational hotel groups, each with its included capabilities.
 
-- **Given** the visitor reaches the pricing section
-- **When** the visitor reviews the plan comparison
-- **Then** the page presents the “Free”, “Professional”, and “Enterprise” plans with descriptions and capability lists.
+### Scenario: The visitor reviews the Enterprise conditions
 
-### Scenario: Each plan has a distinct CTA
+- **Given** the visitor manages a large or multi-country hotel group
+- **When** the visitor evaluates the Enterprise plan
+- **Then** the visitor learns that it includes unlimited locations and RFID readers, an open API for PMS integrations, dedicated onboarding, unlimited users and roles, a guaranteed availability SLA, and dedicated 24/7 support, and that it is requested through the sales team.
 
-- **Given** the visitor reviews the plan cards
-- **When** the visitor looks for an action on each card
-- **Then** the Free plan presents “Start for free”, the Professional plan presents “Explore Professional”, and the Enterprise plan presents “Talk to sales”.
+### Scenario: Each plan leads to its next step
 
-### Scenario: The larger hotel-group option is presented as a commercial pathway
+- **Given** the visitor has chosen a plan
+- **When** the visitor decides to continue
+- **Then** Starter and Professional lead to the information of each plan, and Enterprise leads to the sales contact.
 
-- **Given** the visitor is evaluating a larger or multi-country hotel operation
-- **When** the visitor reviews the segment pathways and plan comparison
-- **Then** the page presents the “Hotel group” pathway, the “Enterprise” plan, and “Talk to sales” as the next step.
+### Scenario: The visitor contacts the sales team
 
-### Scenario: The Enterprise CTA opens the sales next step
+- **Given** a visitor from a hotel group wants to talk to sales
+- **When** the visitor sends their name, the hotel or group they represent, and a message
+- **Then** the request is registered and the visitor is informed that a Hostera teammate will follow up.
 
-- **Given** the visitor is viewing the Enterprise plan
-- **When** the visitor selects “Talk to sales”
-- **Then** the page opens the sales contact next step for the larger hotel-group offering.
+### Scenario: The visitor leaves a sales request incomplete
 
-### Scenario: The closing panel repeats the available next steps
+- **Given** the visitor wants to contact the sales team
+- **When** the visitor tries to send the request without the name, the hotel or group, or the message
+- **Then** the request is not sent and the visitor is asked to complete the missing information.
 
-- **Given** the visitor reaches the closing section
-- **When** the visitor reviews the action group
-- **Then** the page presents “Start for free” and “Talk to sales” alongside the message “Bring every property into one view.”
+### Scenario: The visitor decides after reviewing all the content
 
-### Scenario: A plan CTA takes the visitor to its next step
+- **Given** the visitor has reviewed the information of Hostera
+- **When** the visitor is ready to choose
+- **Then** the visitor can continue with the Starter plan or contact the sales team.
 
-- **Given** the visitor is viewing a plan card
-- **When** the visitor selects a plan CTA
-- **Then** the page takes the visitor to the next step associated with that plan, such as starting the Free experience, evaluating Professional, or contacting sales.
+---
 
 ## US007: Explore product, team, and support content
 
-As a visitor, I want product, team, and support information in the Landing Page, so that I can learn more before choosing a plan.
+As a visitor, I want product, team, and support information about Hostera, so that I can learn more before choosing a plan.
 
-### Scenario: The product discovery area exposes a video entry point
+### Scenario: The visitor watches the product presentation
 
-- **Given** the visitor reaches the product section
-- **When** the visitor reviews the product media area
-- **Then** the page presents a play control, “Discover Hostera”, and “See how it works in daily hotel operations”.
+- **Given** the visitor wants to understand how Hostera operates
+- **When** the visitor requests the product presentation
+- **Then** the system provides the product video explaining how Hostera works in daily hotel operations.
 
-### Scenario: The team area exposes a team-video entry point
+### Scenario: The visitor watches the team presentation
 
-- **Given** the visitor reaches the team section
-- **When** the visitor reviews the team media area
-- **Then** the page presents a play control, “Meet the team”, and “Discover who is building Hostera and why”.
+- **Given** the visitor wants to know who is building Hostera
+- **When** the visitor requests the team presentation
+- **Then** the system provides the team video explaining who builds Hostera and the reasons behind the product.
 
-### Scenario: The team section identifies the engineering team
+### Scenario: The visitor identifies the engineering team
 
-- **Given** the visitor reviews the team section below the media area
-- **When** the visitor reads the team cards
-- **Then** the page identifies Mateo Condori, Joaquin Cuba, Darnell Cuba, Juan Flores, and José Santana as software engineers and provides a short contribution description for each.
+- **Given** the visitor wants to know the people behind Hostera
+- **When** the visitor reviews the team information
+- **Then** the visitor identifies Mateo Condori, Joaquin Cuba, Darnell Cuba, Juan Flores, and José Santana as software engineers, with a short description of each person's contribution.
 
-### Scenario: The support area answers the evidenced questions
+### Scenario: The visitor resolves questions before choosing a plan
 
-- **Given** the visitor reaches the support area
-- **When** the visitor reviews the FAQ list
-- **Then** the page provides answers about starting with one hotel, what changes with Professional, and availability in English and Spanish.
+- **Given** the visitor has questions about the service
+- **When** the visitor consults the frequently asked questions
+- **Then** the visitor finds answers about starting with one hotel, what changes with Professional, and the availability of Hostera in English and Latin American Spanish.
 
-### Scenario: A collapsed FAQ question reveals its answer
+---
 
-- **Given** an FAQ question is collapsed
-- **When** the visitor selects the question or its expand control
-- **Then** the question expands and its answer becomes visible.
+## US008: Consult Hostera information in English or Spanish
 
-### Scenario: An expanded FAQ question collapses again
+As a visitor, I want to choose English or Spanish, so that I can understand Hostera information in the language I understand best.
 
-- **Given** an FAQ question is expanded and its answer is visible
-- **When** the visitor selects the question or its collapse control again
-- **Then** the answer is hidden and the question returns to its collapsed state.
+### Scenario: The visitor chooses the language
 
-### Scenario: The product video control starts product discovery
+- **Given** a visitor prefers to read in English or in Spanish
+- **When** the visitor chooses that language
+- **Then** the topics, value proposition, options by operating scale, plans, next steps, and support content are presented in the selected language.
 
-- **Given** the visitor is viewing the product media area
-- **When** the visitor activates the play control
-- **Then** the product video starts and presents the daily hotel-operations demonstration.
+### Scenario: The Spanish variant preserves the offer
 
-### Scenario: The team video control starts team discovery
+- **Given** the visitor consults Hostera information in Spanish
+- **When** the visitor reviews the options and plans
+- **Then** the visitor finds the options “Hotel independiente”, “Cadena hotelera pequeña”, and “Grupo hotelero”, and the plans “Starter”, “Profesional”, and “Empresarial”, with the same prices and conditions as the English variant.
 
-- **Given** the visitor is viewing the team media area
-- **When** the visitor activates the play control
-- **Then** the team video starts and presents the team and its work.
+### Scenario: The visitor changes language at any moment
 
-## US008: Use the English and Spanish Landing Page variants
-
-As a visitor, I want to choose English or Spanish, so that I can read the Landing Page in the language I understand best.
-
-### Scenario: The English variant exposes the language control
-
-- **Given** the visitor opens the English Landing Page
-- **When** the visitor reviews the header or footer
-- **Then** the page exposes the “EN / ES” language control and English navigation labels and CTAs.
-
-### Scenario: The Spanish variant localizes the visitor-facing content
-
-- **Given** the visitor opens the Spanish Landing Page variant
-- **When** the visitor reviews the header, hero, segment paths, plans, and footer
-- **Then** the page presents Spanish labels such as “Soluciones”, “Funciones”, “Precios”, “Producto”, “Nosotros”, “Comenzar gratis”, and “Hablar con ventas”.
-
-### Scenario: The Spanish variant preserves the two target paths
-
-- **Given** the visitor is reading the Spanish variant
-- **When** the visitor reaches the segment pathways
-- **Then** the page presents “Hotel independiente” for one hotel with up to 10 rooms and “Cadena hotelera pequeña” for 2 to 5 hotels, with “Comenzar gratis” and “Ver plan Profesional” respectively.
-
-### Scenario: Changing language presents the selected localized content
-
-- **Given** the visitor is viewing either supported language variant
-- **When** the visitor selects the language control and chooses English or Spanish
-- **Then** the page presents the selected localized navigation, content, segment paths, plans, and calls-to-action.
+- **Given** the visitor is reading either language variant
+- **When** the visitor chooses the other language
+- **Then** the content the visitor was consulting is presented in the newly selected language.
