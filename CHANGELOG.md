@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-10-06
+
+### Added
+
+- English and Spanish sign-in link to the Hostera application in the homepage, sales, and terms headers, including the mobile menu.
+
+### Changed
+
+- Adjusted header spacing and the mobile-menu breakpoint to accommodate the sign-in link.
+
 ## [0.3.0] - 2026-10-03
 
 ### Added
